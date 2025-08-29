@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Linkedin, Mail, ArrowDown } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Home() {
   return (
@@ -15,6 +16,15 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            <div className="w-32 h-32 mx-auto mb-8 relative overflow-hidden rounded-full border-4 border-primary/20">
+              <Image
+                src="/karan.png"
+                alt="Karan Pahlani"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
               Karan Pahlani
             </h1>

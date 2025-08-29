@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 export default function About() {
   return (
@@ -25,8 +26,14 @@ export default function About() {
           
           <div className="relative">
             <div className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg p-8 text-center">
-              <div className="w-48 h-48 bg-muted rounded-full mx-auto mb-4 flex items-center justify-center">
-                <span className="text-muted-foreground text-sm">Your Photo Here</span>
+              <div className="w-48 h-48 mx-auto mb-4 relative overflow-hidden rounded-full">
+                <Image
+                  src="/karan.png"
+                  alt="Karan Pahlani"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
