@@ -1,9 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Linkedin, Mail, ArrowDown } from "lucide-react"
+import { ArrowDown } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
+import { ProfileCard, defaultSocialLinks } from "@/components/profile-card"
 
 export default function Home() {
   return (
@@ -15,45 +15,15 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="text-center mb-16"
+            className="flex flex-col items-center mb-16"
           >
-            <div className="w-40 h-40 mx-auto mb-12 relative overflow-hidden rounded-full border-2 border-primary/30">
-              <Image
-                src="/karan.png"
-                alt="Karan Pahlani"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-            
-            <motion.h1 
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-none"
-            >
-              <span className="block text-white">KARAN</span>
-              <span className="block text-primary">PAHLANI</span>
-            </motion.h1>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.6 }}
-              className="text-2xl md:text-3xl text-muted-foreground font-medium mb-6"
-            >
-              Senior Software Engineer
-            </motion.p>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.8 }}
-              className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-light mb-16 leading-relaxed"
-            >
-              Specializing in scalable, customer-centric applications. Expert in driving architectural evolution from monoliths to distributed microservices.
-            </motion.p>
+            <ProfileCard
+              name="KARAN PAHLANI"
+              title="Senior Software Engineer"
+              description="Specializing in scalable, customer-centric applications. Expert in driving architectural evolution from monoliths to distributed microservices."
+              imageSrc="/karan.png"
+              socialLinks={defaultSocialLinks}
+            />
           </motion.div>
 
           <motion.div
@@ -73,28 +43,6 @@ export default function Home() {
               className="border border-primary/30 hover:border-primary hover:bg-primary/10 text-white px-12 py-4 rounded-xl font-semibold text-lg transition-all hover:scale-105 min-w-[200px] text-center"
             >
               Get In Touch
-            </Link>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.2 }}
-            className="flex items-center justify-center gap-8"
-          >
-            <Link
-              href="https://linkedin.com/in/karanpahlani"
-              className="text-muted-foreground hover:text-primary transition-colors p-3"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Linkedin className="w-8 h-8" />
-            </Link>
-            <Link
-              href="mailto:pahlani@gmail.com"
-              className="text-muted-foreground hover:text-primary transition-colors p-3"
-            >
-              <Mail className="w-8 h-8" />
             </Link>
           </motion.div>
         </div>
