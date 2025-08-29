@@ -13,25 +13,46 @@
             font-family: 'Inter', sans-serif;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background: #0a0a0f;
             min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .page-container {
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh;
+            padding: 80px 20px 40px 20px;
         }
         .a4-container {
             width: 210mm;
-            height: 297mm;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            padding: 48px;
+            position: relative;
+            overflow: hidden;
         }
         
-        /* Navigation Overlay - Only for screen */
+        .a4-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 107, 61, 0.3), transparent);
+        }
+        
+        /* Navigation - matches main site */
         .nav-overlay {
             position: fixed;
             top: 24px;
             left: 50%;
             transform: translateX(-50%);
-            z-index: 1000;
-            pointer-events: none;
+            z-index: 50;
         }
         .nav {
             display: flex;
@@ -39,10 +60,9 @@
             gap: 32px;
             background: rgba(24, 24, 27, 0.9);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(161, 161, 170, 0.5);
+            border: 1px solid rgba(129, 140, 248, 0.5);
             border-radius: 16px;
             padding: 8px 40px;
-            pointer-events: auto;
         }
         .nav-item {
             display: flex;
@@ -51,11 +71,16 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            transition: background-color 0.2s;
+            transition: all 0.2s ease;
             text-decoration: none;
             color: rgba(255, 255, 255, 0.7);
         }
         .nav-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            transform: scale(1.05);
+        }
+        .nav-item.active {
             background: rgba(255, 255, 255, 0.15);
             color: white;
         }
@@ -70,11 +95,21 @@
                 padding: 0; 
                 background: white !important;
             }
+            .page-container {
+                background: white !important;
+                padding: 0 !important;
+            }
             .a4-container { 
                 margin: 0; 
+                padding: 20px;
                 box-shadow: none !important; 
                 border: none; 
-                height: auto;
+                border-radius: 0 !important;
+                max-width: none !important;
+                width: 100% !important;
+            }
+            .a4-container::before {
+                display: none;
             }
             .no-print, .nav-overlay { 
                 display: none !important; 
@@ -82,13 +117,34 @@
         }
         
         @media (max-width: 768px) {
+            .nav {
+                gap: 16px;
+                padding: 6px 20px;
+            }
+            .nav-item {
+                width: 36px;
+                height: 36px;
+            }
+            .page-container {
+                padding: 60px 16px 20px 16px;
+            }
+            .a4-container {
+                padding: 32px 24px;
+                border-radius: 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
             .nav-overlay { display: none; }
+            .page-container {
+                padding: 20px 12px;
+            }
         }
     </style>
 </head>
-<body class="bg-gray-100 p-4 sm:p-8">
+<body>
 
-    <!-- Navigation Overlay -->
+    <!-- Navigation -->
     <div class="nav-overlay no-print">
         <nav class="nav">
             <a href="/#home" class="nav-item" title="Home">
@@ -110,7 +166,7 @@
                     <line x1="12" y1="17" x2="12" y2="21"/>
                 </svg>
             </a>
-            <a href="/resume.html" class="nav-item" title="Resume" style="background: rgba(255, 255, 255, 0.15);">
+            <a href="/resume.html" class="nav-item active" title="Resume">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                     <polyline points="14,2 14,8 20,8"/>
@@ -128,8 +184,10 @@
         </nav>
     </div>
 
-    <!-- A4 Container -->
-    <div class="a4-container bg-white p-8 sm:p-12 shadow-lg">
+    <!-- Page Container -->
+    <div class="page-container">
+        <!-- Resume Container -->
+        <div class="a4-container">
         
         <!-- Header -->
         <header class="text-center pb-4 border-b border-gray-200">
@@ -242,14 +300,19 @@
             </div>
         </section>
         
-    </div>
-    
-    <!-- Print Button -->
-    <div class="text-center mt-6 mb-6 no-print">
-        <button onclick="window.print()" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
-            <i class="fas fa-print mr-2"></i> Print or Save as PDF
-        </button>
-    </div>
+        </div> <!-- End Resume Container -->
+        
+        <!-- Print Button -->
+        <div class="text-center mt-8 no-print">
+            <button onclick="window.print()" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-3 px-8 rounded-full hover:from-blue-700 hover:to-purple-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                <svg class="w-4 h-4 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+                </svg>
+                Print or Save as PDF
+            </button>
+        </div>
+        
+    </div> <!-- End Page Container -->
 
 </body>
 </html>
