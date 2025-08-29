@@ -145,12 +145,12 @@ export default function Home() {
                 <div className="text-xs lg:text-sm text-white/60 leading-tight">YEARS OF<br/>EXPERIENCE</div>
               </div>
               <div>
-                <div className="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white mb-2">+46</div>
-                <div className="text-xs lg:text-sm text-white/60 leading-tight">PROJECTS<br/>COMPLETED</div>
+                <div className="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white mb-2">+12</div>
+                <div className="text-xs lg:text-sm text-white/60 leading-tight">MILLION<br/>ACTIVE USERS</div>
               </div>
               <div>
-                <div className="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white mb-2">+20</div>
-                <div className="text-xs lg:text-sm text-white/60 leading-tight">WORLDWIDE<br/>CLIENTS</div>
+                <div className="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white mb-2">+10</div>
+                <div className="text-xs lg:text-sm text-white/60 leading-tight">PROJECTS</div>
               </div>
             </motion.div>
 
