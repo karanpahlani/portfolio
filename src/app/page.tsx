@@ -45,15 +45,15 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen lg:flex">
+      <div className="min-h-screen lg:flex lg:justify-center lg:max-w-7xl lg:mx-auto">
       {/* Profile Card */}
-      <div className="lg:sticky lg:top-4 lg:h-screen lg:w-96 lg:flex-shrink-0">
-        <div className="px-4 lg:px-8 py-10 lg:py-20 h-full flex items-center">
+      <div className="lg:sticky lg:top-4 lg:h-screen lg:w-96 xl:w-[400px] 2xl:w-[420px] lg:flex-shrink-0">
+        <div className="px-4 lg:px-8 xl:px-10 2xl:px-12 py-10 lg:py-20 h-full flex items-start lg:items-center lg:justify-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white text-zinc-900 rounded-3xl p-6 shadow-soft relative overflow-hidden w-full max-w-sm mx-auto lg:max-w-none lg:w-80 lg:h-[85vh] lg:min-h-[650px]"
+            className="bg-white text-zinc-900 rounded-3xl p-6 shadow-soft relative overflow-hidden w-full max-w-sm mx-auto lg:max-w-none lg:w-80 lg:h-auto lg:max-h-[70vh] xl:max-h-[65vh] 2xl:max-h-[60vh]"
           >
             {/* Dotted curve decoration */}
             <svg className="absolute -left-4 top-8 w-40 h-40 rotate-12" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,7 +114,7 @@ export default function Home() {
 
 
       {/* Main Content */}
-      <div className="flex-1 lg:ml-8" style={{ maxWidth: '1140px' }}>
+      <div className="flex-1 lg:ml-12 xl:ml-16 2xl:ml-20 lg:max-w-4xl">
         {/* Hero Section */}
         <section id="home" className="min-h-screen flex items-center px-4 sm:px-6 lg:px-8 py-10 lg:py-20">
           <div className="w-full max-w-5xl mx-auto">

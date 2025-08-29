@@ -13,6 +13,8 @@
             font-family: 'Inter', sans-serif;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
         }
         .a4-container {
             width: 210mm;
@@ -21,18 +23,110 @@
             display: flex;
             flex-direction: column;
         }
+        
+        /* Navigation Overlay - Only for screen */
+        .nav-overlay {
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            pointer-events: none;
+        }
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            background: rgba(24, 24, 27, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(161, 161, 170, 0.5);
+            border-radius: 16px;
+            padding: 8px 40px;
+            pointer-events: auto;
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: background-color 0.2s;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+        }
+        
         @media print {
             @page {
                 margin: 1cm;
                 size: A4;
             }
-            body { margin: 0; padding: 0; }
-            .a4-container { margin: 0; box-shadow: none !important; border: none; height: auto;}
-            .no-print { display: none; }
+            body { 
+                margin: 0; 
+                padding: 0; 
+                background: white !important;
+            }
+            .a4-container { 
+                margin: 0; 
+                box-shadow: none !important; 
+                border: none; 
+                height: auto;
+            }
+            .no-print, .nav-overlay { 
+                display: none !important; 
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-overlay { display: none; }
         }
     </style>
 </head>
 <body class="bg-gray-100 p-4 sm:p-8">
+
+    <!-- Navigation Overlay -->
+    <div class="nav-overlay no-print">
+        <nav class="nav">
+            <a href="/#home" class="nav-item" title="Home">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9,22 9,12 15,12 15,22"/>
+                </svg>
+            </a>
+            <a href="/#about" class="nav-item" title="About">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                </svg>
+            </a>
+            <a href="/#projects" class="nav-item" title="Experience">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+            </a>
+            <a href="/resume.html" class="nav-item" title="Resume" style="background: rgba(255, 255, 255, 0.15);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14,2 14,8 20,8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                    <polyline points="10,9 9,9 8,9"/>
+                </svg>
+            </a>
+            <a href="/#contact" class="nav-item" title="Contact">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                </svg>
+            </a>
+        </nav>
+    </div>
 
     <!-- A4 Container -->
     <div class="a4-container bg-white p-8 sm:p-12 shadow-lg">
