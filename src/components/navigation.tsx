@@ -1,87 +1,80 @@
 "use client"
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { motion } from "framer-motion"
-import { Menu, X } from "lucide-react"
 import { useState } from "react"
+import { motion } from "framer-motion"
+import { Home, User, Briefcase, Mail, Menu, X } from "lucide-react"
 
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Projects", href: "/projects" },
-  { name: "Contact", href: "/contact" },
+  { name: "Home", href: "#home", icon: Home },
+  { name: "About", href: "#about", icon: User },
+  { name: "Projects", href: "#projects", icon: Briefcase },
+  { name: "Contact", href: "#contact", icon: Mail },
 ]
 
 export function Navigation() {
-  const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId.replace('#', ''))
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+    setMobileMenuOpen(false)
+  }
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-border/20">
-      <div className="max-w-7xl mx-auto flex h-20 items-center justify-between px-8">
-        <Link className="flex items-center space-x-2" href="/">
-          <span className="text-xl font-bold text-white">
-            KP
-          </span>
-        </Link>
+    <header className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
+      {/* Floating Navigation */}
+      <motion.nav
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="hidden md:flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-6 py-3"
+      >
+        {navItems.map((item) => (
+          <button
+            key={item.href}
+            onClick={() => scrollToSection(item.href)}
+            className="flex items-center justify-center w-12 h-12 rounded-xl hover:bg-white/20 transition-all duration-300 group"
+            title={item.name}
+          >
+            <item.icon className="w-5 h-5 text-white/70 group-hover:text-white transition-colors" />
+          </button>
+        ))}
+      </motion.nav>
 
-        <nav className="hidden md:flex items-center space-x-12">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`relative text-lg font-medium transition-colors hover:text-primary ${
-                pathname === item.href ? "text-primary" : "text-muted-foreground"
-              }`}
-            >
-              {item.name}
-              {pathname === item.href && (
-                <motion.div
-                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full"
-                  layoutId="activeNav"
-                />
-              )}
-            </Link>
-          ))}
-        </nav>
-
+      {/* Mobile Menu Button */}
+      <div className="md:hidden">
         <button
-          className="md:hidden text-white hover:text-primary transition-colors p-2"
-          type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="flex items-center justify-center w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl text-white hover:bg-white/20 transition-all"
         >
-          {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          <span className="sr-only">Toggle Menu</span>
+          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
-      </div>
 
-      {mobileMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="md:hidden bg-background/95 backdrop-blur-md border-b border-border/20"
-        >
-          <div className="px-8 py-8">
-            <nav className="flex flex-col space-y-6">
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: -10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.9, y: -10 }}
+            className="absolute top-14 left-0 right-0 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4"
+          >
+            <div className="flex flex-col gap-2">
               {navItems.map((item) => (
-                <Link
+                <button
                   key={item.href}
-                  href={item.href}
-                  className={`text-xl font-medium transition-colors hover:text-primary ${
-                    pathname === item.href ? "text-primary" : "text-muted-foreground"
-                  }`}
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => scrollToSection(item.href)}
+                  className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/20 transition-all text-white/70 hover:text-white"
                 >
-                  {item.name}
-                </Link>
+                  <item.icon className="w-4 h-4" />
+                  <span className="text-sm font-medium">{item.name}</span>
+                </button>
               ))}
-            </nav>
-          </div>
-        </motion.div>
-      )}
+            </div>
+          </motion.div>
+        )}
+      </div>
     </header>
   )
 }

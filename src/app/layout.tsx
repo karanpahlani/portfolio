@@ -39,7 +39,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navigation />
-          <main className="bg-background pt-20">
+          <main>
             {children}
           </main>
           <Analytics />
