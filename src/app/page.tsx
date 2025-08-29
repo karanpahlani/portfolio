@@ -141,7 +141,7 @@ export default function Home() {
               className="mb-8 grid grid-cols-3 gap-4 lg:gap-6"
             >
               <div>
-                <div className="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white mb-2">+12</div>
+                <div className="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white mb-2">+6</div>
                 <div className="text-xs lg:text-sm text-white/60 leading-tight">YEARS OF<br/>EXPERIENCE</div>
               </div>
               <div>
