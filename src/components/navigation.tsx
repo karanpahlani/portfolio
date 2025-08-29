@@ -23,19 +23,19 @@ export function Navigation() {
   }
 
   return (
-    <header className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
-      {/* Floating Navigation */}
+    <header className="absolute top-6 left-1/2 transform -translate-x-1/2 z-50">
+      {/* Clean Navigation */}
       <motion.nav
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="hidden md:flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-6 py-3"
+        className="hidden md:flex items-center gap-8 bg-zinc-900/90 backdrop-blur-md border border-zinc-800/50 rounded-2xl px-10 py-2"
       >
         {navItems.map((item) => (
           <button
             key={item.href}
             onClick={() => scrollToSection(item.href)}
-            className="flex items-center justify-center w-12 h-12 rounded-xl hover:bg-white/20 transition-all duration-300 group"
+            className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-white/15 transition-colors duration-200 group"
             title={item.name}
           >
             <item.icon className="w-5 h-5 text-white/70 group-hover:text-white transition-colors" />
