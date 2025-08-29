@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karan Pahlani - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        .a4-container {
+            width: 210mm;
+            height: 297mm;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        @media print {
+            @page {
+                margin: 1cm;
+                size: A4;
+            }
+            body { margin: 0; padding: 0; }
+            .a4-container { margin: 0; box-shadow: none !important; border: none; height: auto;}
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 sm:p-8">
+
+    <!-- A4 Container -->
+    <div class="a4-container bg-white p-8 sm:p-12 shadow-lg">
+        
+        <!-- Header -->
+        <header class="text-center pb-4 border-b border-gray-200">
+            <h1 class="text-3xl font-bold text-gray-800 tracking-tight">KARAN PAHLANI</h1>
+            <h2 class="text-lg font-medium text-gray-600 mt-1">Senior Software Engineer</h2>
+            <div class="flex justify-center items-center space-x-4 mt-2 text-xs text-gray-600">
+                <span>(319) 383-5548</span>
+                <span>|</span>
+                <span>pahlani@gmail.com</span>
+                <span>|</span>
+                <span>Seattle, WA</span>
+                <span>|</span>
+                <a href="https://linkedin.com/in/karanpahlani" target="_blank" class="hover:text-blue-600">linkedin.com/in/karanpahlani</a>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="mt-4">
+            <p class="text-gray-700 text-xs text-center text-justify leading-relaxed">
+                Senior Software Engineer with a Master's, specializing in scalable, customer-centric applications. I have successfully driven the architectural evolution from a <b>Java/MongoDB</b> monolith to a distributed system of <b>Go</b> microservices, strategically adopting specialized databases like <b>PostgreSQL</b>, <b>DynamoDB</b>, and <b>Redis</b>. This transformation unlocked significant gains in scalability, deployment frequency, and developer productivity. Experienced in A/B testing and data-driven optimization to improve user acquisition and deliver business-critical outcomes.
+            </p>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="mt-4">
+            <h3 class="text-sm font-bold text-gray-700 uppercase tracking-wider mb-2 border-b pb-1">Technical Skills</h3>
+            <div class="text-xs text-gray-700 space-y-1">
+                <p><b>Core Competencies:</b> Product-Focused Engineering | Data-Driven Decisions | Applied AI</p>
+                <p><b>Languages & Frameworks:</b> Go, Java, Python, JavaScript, TypeScript, React, NodeJS, Ruby on Rails, REST, gRPC</p>
+                <p><b>Platforms & Architecture:</b> AWS (S3, SNS, SQS), Docker, Kubernetes, Kafka, Microservices, Distributed Systems, Terraform</p>
+                <p><b>DB & Tools:</b> PostgreSQL, DynamoDB, MongoDB, Redis, Snowflake, CI/CD (BitBucket Pipelines), Grafana, PagerDuty</p>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section class="mt-4">
+            <h3 class="text-sm font-bold text-gray-700 uppercase tracking-wider mb-2 border-b pb-1">Professional Experience</h3>
+            
+            <!-- Fetch -->
+            <div class="mb-4">
+                <h4 class="text-sm font-bold text-gray-800">Fetch Rewards</h4>
+                
+                <div class="mt-2">
+                    <div class="flex justify-between items-baseline">
+                        <p class="text-xs text-gray-600 font-semibold">Senior Software Engineer</p>
+                        <span class="text-xs font-medium text-gray-500">July 2024 – Present</span>
+                    </div>
+                    <ul class="list-disc list-outside mt-1 ml-4 text-xs text-gray-700 space-y-1.5">
+                        <li>Engineered a resilient, asynchronous receipt processing system using <b>Java and Go</b> microservices, <b>AWS SQS</b>, <b>DynamoDB</b>, and <b>Redis</b>. This architecture was critical for scaling to handle Super Bowl ad traffic, successfully managing peaks of over <b>80,000 RPS</b> (a <b>10x</b> increase).</li>
+                        <li>Architected a data aggregation service that cut ML parsing costs by <b>$30K</b> per month by deduplicating emails <b>100x</b>. Spearheaded the e-receipts 2.0 launch in <b>Go</b>, overhauling its monitoring with <b>OpenTelemetry</b>, <b>Grafana</b>, and <b>HostedGraphite</b>, boosting user engagement by <b>40%</b> while cutting fraud by <b>70%</b>.</li>
+                    </ul>
+                </div>
+
+                <div class="mt-2">
+                    <div class="flex justify-between items-baseline">
+                        <p class="text-xs text-gray-600 font-semibold">Team Lead</p>
+                        <span class="text-xs font-medium text-gray-500">Jan 2022 – July 2024</span>
+                    </div>
+                    <ul class="list-disc list-outside mt-1 ml-4 text-xs text-gray-700 space-y-1.5">
+                        <li>Led a full-stack team to architect a universal product catalog using <b>Go</b> microservices with <b>PostgreSQL</b> and <b>DynamoDB</b>, boosting offer matching accuracy by <b>35%</b>. Built a <b>Java Spring Batch</b> ingestion pipeline and a <b>React</b> dashboard to manage product data, which accelerated partner data processing by <b>60%</b> and reduced ingestion errors by <b>30%</b>.</li>
+                    </ul>
+                </div>
+
+                <div class="mt-2">
+                    <div class="flex justify-between items-baseline">
+                        <p class="text-xs text-gray-600 font-semibold">Software Engineer II</p>
+                        <span class="text-xs font-medium text-gray-500">May 2021 – Jan 2022</span>
+                    </div>
+                    <ul class="list-disc list-outside mt-1 ml-4 text-xs text-gray-700 space-y-1.5">
+                        <li>Developed a self-service partner platform with a <b>Go</b> authentication microservice (OIDC/SAML, <b>PostgreSQL</b>) that cut integration time by <b>90%</b>, and built a <b>React</b> dashboard for marketing to manage campaigns and monitor real-time offer performance, boosting engagement by <b>20%</b>.</li>
+                    </ul>
+                </div>
+
+                <div class="mt-2">
+                    <div class="flex justify-between items-baseline">
+                        <p class="text-xs text-gray-600 font-semibold">Software Engineer</p>
+                        <span class="text-xs font-medium text-gray-500">July 2020 – May 2021</span>
+                    </div>
+                    <ul class="list-disc list-outside mt-1 ml-4 text-xs text-gray-700 space-y-1.5">
+                        <li>Drove a <b>15%</b> increase in user acquisition by building the phone number onboarding flow in <b>Go</b>, leveraging <b>AWS SNS</b> to reduce SMS delivery failures. Also developed a <b>React</b> support dashboard that cut ticket handling time by <b>25%</b>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Edammo Inc -->
+            <div class="mb-4">
+                <div class="flex justify-between items-baseline">
+                    <h4 class="text-sm font-bold text-gray-800">Edammo Inc.</h4>
+                    <span class="text-xs font-medium text-gray-500">June 2019 – August 2019</span>
+                </div>
+                <p class="text-xs text-gray-600 font-semibold">Software Development Intern</p>
+                <ul class="list-disc list-outside mt-2 ml-4 text-xs text-gray-700">
+                    <li>Built a full-stack resume scraping and scoring tool (<b>React</b>, <b>NodeJS</b>) that automated candidate sourcing, reducing initial screening time by <b>40%</b>.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="mt-4">
+            <h3 class="text-sm font-bold text-gray-700 uppercase tracking-wider mb-2 border-b pb-1">Education</h3>
+            <div class="text-xs">
+                <div class="flex justify-between">
+                    <p class="font-bold text-gray-800">Master of Computer Science</p>
+                    <p class="text-gray-600">University of Iowa, Iowa City, IA</p>
+                </div>
+                 <div class="flex justify-between mt-1">
+                    <p class="font-bold text-gray-800">Bachelor of Computer Science</p>
+                    <p class="text-gray-600">Rajiv Gandhi Technical University</p>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    
+    <!-- Print Button -->
+    <div class="text-center mt-6 mb-6 no-print">
+        <button onclick="window.print()" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
+            <i class="fas fa-print mr-2"></i> Print or Save as PDF
+        </button>
+    </div>
+
+</body>
+</html>
