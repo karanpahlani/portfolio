@@ -45,16 +45,15 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen flex">
-      {/* Fixed Profile Card */}
-      <div className="hidden lg:block fixed left-0 top-0 h-screen" style={{ width: '420px', zIndex: 40 }}>
-        <div className="pl-16 pr-6 h-full flex items-center" style={{ paddingTop: '120px' }}>
+      <div className="min-h-screen lg:flex">
+      {/* Profile Card */}
+      <div className="lg:sticky lg:top-4 lg:h-screen lg:w-96 lg:flex-shrink-0">
+        <div className="px-4 lg:px-8 py-10 lg:py-20 h-full flex items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white text-zinc-900 rounded-3xl p-6 shadow-soft relative overflow-hidden w-full"
-            style={{ width: '380px', height: '80vh', minHeight: '650px' }}
+            className="bg-white text-zinc-900 rounded-3xl p-6 shadow-soft relative overflow-hidden w-full max-w-sm mx-auto lg:max-w-none lg:w-80 lg:h-[85vh] lg:min-h-[650px]"
           >
             {/* Dotted curve decoration */}
             <svg className="absolute -left-4 top-8 w-40 h-40 rotate-12" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,67 +112,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Mobile Profile Card */}
-      <div className="lg:hidden w-full px-4 py-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-white text-zinc-900 rounded-3xl p-6 shadow-soft relative overflow-hidden max-w-sm mx-auto mb-8"
-        >
-          <svg className="absolute -left-4 top-8 w-40 h-40 rotate-12" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path className="curve" d="M10 150 C70 20, 130 20, 190 150" stroke="#FF6A3D" strokeWidth="4" strokeLinecap="round"/>
-          </svg>
-          
-          <div className="rounded-2xl overflow-hidden mb-6 relative z-10">
-            <div className="aspect-[4/3] grid place-items-center bg-gradient-to-br from-[#FF5C00] via-[#FF6A3D] to-[#B32600]">
-              <Image
-                src="/karan-headshot.png"
-                alt="Karan Pahlani"
-                width={320}
-                height={240}
-                className="h-full w-full object-cover"
-                priority
-              />
-            </div>
-          </div>
-          
-          <h2 className="text-2xl font-extrabold mb-2 relative z-10">Karan Pahlani</h2>
-          <div className="mb-4 inline-flex items-center gap-2 relative z-10">
-            <span className="inline-grid place-items-center h-6 w-6 rounded-full bg-orange-100 text-orange-600">🔥</span>
-            <span className="text-sm text-zinc-600">Senior Software Engineer</span>
-          </div>
-          <p className="mb-6 text-sm text-zinc-600 leading-relaxed relative z-10">
-            A Software Engineer who has developed countless innovative solutions.
-          </p>
-          
-          <div className="flex items-center gap-4 text-zinc-500 relative z-10">
-            <Link href="#" className="hover:text-zinc-700 transition-colors" aria-label="Dribbble">
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2Zm6.938 7.5h-3.96a27.82 27.82 0 0 0-1.52-3.414A8.03 8.03 0 0 1 18.938 9.5ZM12 3.999c1.7 0 3.267.568 4.523 1.523a29.717 29.717 0 0 1 1.712 3.763H12c-.336 0-.664.02-.983.058A29.42 29.42 0 0 0 9.22 4.588 8.006 8.006 0 0 1 12 3.999ZM7.99 5.545a27.797 27.797 0 0 1 1.67 3.51 8.048 8.048 0 0 0-4.89 3.211A7.966 7.966 0 0 1 7.99 5.545Zm-3.99 6.454c0-.142.004-.284.014-.424a10.04 10.04 0 0 1 5.77-3.79c.276.58.524 1.17.742 1.764.113.31.22.622.319.933-2.327.7-4.37 2.232-5.845 4.374A7.948 7.948 0 0 1 4 11.999Zm1.062 3.5A8.02 8.02 0 0 1 8.99 12.77c.59-.257 1.22-.45 1.882-.573.37 1.129.647 2.34.821 3.6.094.676.155 1.37.183 2.069A8.005 8.005 0 0 1 5.062 15.5Zm7.424 5.483a29.842 29.842 0 0 0-.198-2.26c-.162-1.156-.418-2.268-.76-3.313.57-.053 1.166-.061 1.782-.022 1.382.087 2.858.35 4.406.783A8.01 8.01 0 0 1 12.486 20.983ZM19.4 18.11c-1.7-.485-3.294-.758-4.758-.851-.725-.046-1.417-.031-2.07.046a18.824 18.824 0 0 0-.793-2.19c1.382-.137 2.923-.056 4.605.24a21.71 21.71 0 0 1 3.944 1.131A8.01 8.01 0 0 1 19.4 18.11ZM20 12c0 .907-.155 1.779-.44 2.59a23.74 23.74 0 0 0-4.762-1.032 13.186 13.186 0 0 0-2.716.014 16.7 16.7 0 0 0-.553-1.617c-.058-.153-.119-.306-.181-.459.3-.038.61-.059.931-.059h6.832A7.97 7.97 0 0 1 20 12Z"/>
-              </svg>
-            </Link>
-            <Link href="#" className="hover:text-zinc-700 transition-colors" aria-label="Twitter">
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M22 5.92a8.2 8.2 0 0 1-2.357.646 4.11 4.11 0 0 0 1.804-2.267 8.223 8.223 0 0 1-2.606.996A4.097 4.097 0 0 0 11.2 8.034a11.632 11.632 0 0 1-8.445-4.282 4.097 4.097 0 0 0 1.267 5.466 4.08 4.08 0 0 1-1.856-.513v.052a4.097 4.097 0 0 0 3.287 4.016 4.107 4.107 0 0 1-1.85.07 4.099 4.099 0 0 0 3.826 2.843A8.218 8.218 0 0 1 2 17.542a11.6 11.6 0 0 0 6.29 1.844c7.547 0 11.675-6.254 11.675-11.675 0-.177-.004-.353-.012-.528A8.34 8.34 0 0 0 22 5.92Z"/>
-              </svg>
-            </Link>
-            <Link href="#" className="hover:text-zinc-700 transition-colors" aria-label="Instagram">
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2Zm5.25-.95a.95.95 0 1 1-1.9 0 .95.95 0 0 1 1.9 0Z"/>
-              </svg>
-            </Link>
-            <Link href="mailto:pahlani@gmail.com" className="hover:text-zinc-700 transition-colors" aria-label="Mail">
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 2v.217l8 5.333 8-5.333V6H4Zm16 12V9.15l-7.2 4.8a2 2 0 0 1-2.3 0L4 9.15V18h16Z"/>
-              </svg>
-            </Link>
-          </div>
-        </motion.div>
-      </div>
 
-      {/* Scrollable Content */}
-      <div className="flex-1 ml-[420px]" style={{ maxWidth: '1140px' }}>
+      {/* Main Content */}
+      <div className="flex-1 lg:ml-8" style={{ maxWidth: '1140px' }}>
         {/* Hero Section */}
         <section id="home" className="min-h-screen flex items-center px-4 sm:px-6 lg:px-8 py-10 lg:py-20">
           <div className="w-full max-w-5xl mx-auto">
@@ -184,8 +125,8 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="mb-12 pt-16 lg:pt-20"
             >
-              <div className="text-[52px] sm:text-[86px] lg:text-[94px] xl:text-[110px] font-extrabold tracking-tight text-white leading-none">SOFTWARE</div>
-              <div className="text-[52px] sm:text-[86px] lg:text-[94px] xl:text-[110px] font-extrabold tracking-tight text-white/20 mb-8 leading-none">ENGINEER</div>
+              <div className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[110px] font-extrabold tracking-tight text-white leading-none">SOFTWARE</div>
+              <div className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[110px] font-extrabold tracking-tight text-white/20 mb-8 leading-none">ENGINEER</div>
               <p className="max-w-3xl text-lg lg:text-xl text-white/70 leading-relaxed">
                 Passionate about creating intuitive and engaging experiences. I specialize in transforming ideas into
                 beautifully crafted products.
@@ -277,7 +218,7 @@ export default function Home() {
             >
               <h2 className="display-1 font-extrabold mb-6 text-white">ABOUT</h2>
               <p className="text-lg text-white/70 max-w-3xl mx-auto">
-                Senior Software Engineer with a Master's degree, specializing in scalable, customer-centric applications. 
+                Senior Software Engineer with a Master&apos;s degree, specializing in scalable, customer-centric applications. 
                 I have successfully driven the architectural evolution from a Java/MongoDB monolith to a distributed system of Go microservices.
               </p>
             </motion.div>
@@ -386,7 +327,7 @@ export default function Home() {
             >
               <h2 className="display-1 font-extrabold mb-6 text-white">CONTACT</h2>
               <p className="text-lg text-white/70 max-w-2xl mx-auto">
-                Have a project in mind or looking for a senior engineer? I'd love to hear from you. Let's create something impactful together!
+                Have a project in mind or looking for a senior engineer? I&apos;d love to hear from you. Let&apos;s create something impactful together!
               </p>
             </motion.div>
             
@@ -464,7 +405,7 @@ export default function Home() {
                 className="space-y-8"
               >
                 <div>
-                  <h3 className="text-xl font-semibold mb-6 text-white">Let's Connect</h3>
+                  <h3 className="text-xl font-semibold mb-6 text-white">Let&apos;s Connect</h3>
                   <div className="space-y-4">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 bg-[var(--accent)]/20 rounded-full flex items-center justify-center">
