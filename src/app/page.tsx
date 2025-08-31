@@ -146,6 +146,14 @@ function ContactSection() {
             <MapPin className="w-5 h-5 text-[#FF6A3D]" />
             <span className="text-white/80">Seattle, WA</span>
           </div>
+          <div className="flex items-center gap-3">
+            <svg className="w-5 h-5 text-[#FF6A3D]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+            </svg>
+            <a href="https://calendly.com/pahlani/30min" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
+              Schedule a Call
+            </a>
+          </div>
         </motion.div>
 
         <motion.div
@@ -316,6 +324,13 @@ export default function Home() {
               <Link href="mailto:pahlani@gmail.com" className="hover:text-[#E55A33] transition-all hover:scale-110" aria-label="Gmail">
                 <svg className="w-6 h-6 drop-shadow-sm" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+                </svg>
+              </Link>
+              
+              {/* Calendly */}
+              <Link href="https://calendly.com/pahlani/30min" target="_blank" rel="noopener noreferrer" className="hover:text-[#E55A33] transition-all hover:scale-110" aria-label="Schedule a Call">
+                <svg className="w-5 h-5 drop-shadow-sm" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
                 </svg>
               </Link>
             </div>
@@ -989,6 +1004,33 @@ export default function Home() {
 
         {/* Contact Section */}
         <ContactSection />
+
+        {/* Calendly Section */}
+        <section className="px-4 sm:px-6 lg:px-8 py-20">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Schedule a Call</h2>
+              <p className="text-white/70 max-w-2xl mx-auto">
+                Ready to discuss your next project or explore opportunities? Book a time that works for you.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="rounded-3xl p-8 border border-white/10 bg-white/5 backdrop-blur-sm"
+            >
+              <div className="calendly-inline-widget" data-url="https://calendly.com/pahlani/30min?background_color=0a0a0a&text_color=ffffff&primary_color=ff6a3d" style={{ minWidth: '320px', height: '500px' }}></div>
+              <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            </motion.div>
+          </div>
+        </section>
 
         {/* Footer Section */}
         <footer className="px-4 sm:px-6 lg:px-8 py-12 border-t border-white/10">
