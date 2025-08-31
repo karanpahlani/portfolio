@@ -71,9 +71,11 @@ function ContactSection() {
         body: JSON.stringify(data)
       })
 
+      // Always try to parse as JSON since our API now always returns JSON
+      const responseData = await response.json()
+
       if (!response.ok) {
-        const errorData = await response.json()
-        throw new Error(errorData.error || 'Failed to send message')
+        throw new Error(responseData.error || 'Failed to send message')
       }
 
       // Success
@@ -81,7 +83,14 @@ function ContactSection() {
       form.reset()
       setTimeout(() => setSubmitted(false), 5000)
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to send message. Please try again.')
+      // Handle network errors and JSON parsing errors
+      if (err instanceof TypeError && err.message.includes('Failed to fetch')) {
+        setError('Network error. Please check your connection and try again.')
+      } else if (err instanceof SyntaxError) {
+        setError('Server error. Please try again later.')
+      } else {
+        setError(err instanceof Error ? err.message : 'Failed to send message. Please try again.')
+      }
     } finally {
       setIsSubmitting(false)
     }
