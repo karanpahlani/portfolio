@@ -11,9 +11,9 @@ const projects = [
   {
     id: 1,
     title: "🏈 Super Bowl Traffic Resilience",
-    description: "Led architectural transformation from synchronous to asynchronous receipt processing. Built resilient distributed system using Kafka & SQS replay mechanisms to handle 133x traffic surge (600 RPS → 80K RPS).",
+    description: "Led architectural transformation from synchronous to asynchronous receipt processing during Fetch's Super Bowl ad campaign. Built resilient distributed system using Kafka & SQS replay mechanisms to handle 13x traffic surge (6,000 RPS → 80K RPS).",
     technologies: ["Go", "Kafka", "AWS SQS", "DynamoDB", "Real-time Monitoring"],
-    achievements: "133x traffic scaling, Zero downtime during Super Bowl, Real-time incident response",
+    achievements: "13x traffic scaling during Super Bowl ad, Zero downtime, Real-time incident response",
     company: "Fetch Rewards",
     category: "superbowl"
   },
@@ -28,19 +28,21 @@ const projects = [
   },
   {
     id: 3,
-    title: "Universal Product Catalog",
-    description: "Architected a universal product catalog using Go microservices with PostgreSQL and DynamoDB.",
-    technologies: ["Go", "Java Spring Boot", "PostgreSQL", "DynamoDB", "React"],
-    achievements: "35% boost in offer matching accuracy, 60% faster partner data processing",
-    company: "Fetch Rewards"
+    title: "📋 Universal Product Catalog",
+    description: "Engineered million-product catalog with fuzzy matching algorithms and FIDO unique identifiers (solving UPC length/format issues). Multi-source ingestion (XLSX, CSV, web scraping) with real-time updates and ML-powered deduplication.",
+    technologies: ["Go", "Java Spring Boot", "PostgreSQL", "DynamoDB", "Fuzzy Matching", "Web Scraping"],
+    achievements: "35% better receipt matching, 60% faster processing, 20% user engagement boost, revenue increase",
+    company: "Fetch Rewards",
+    category: "catalog"
   },
   {
     id: 4,
-    title: "Self-Service Partner Platform",
-    description: "Developed a comprehensive partner platform with Go authentication microservice (OIDC/SAML) and React dashboard.",
-    technologies: ["Go", "OIDC/SAML", "PostgreSQL", "React"],
-    achievements: "90% faster integration time, 20% boost in engagement",
-    company: "Fetch Rewards"
+    title: "🤝 Self-Service Partner Platform",
+    description: "Architected business.fetch.com - a comprehensive B2B platform enabling major CPGs (Pepsi, Kimberly Clark, Unilever) to self-service campaigns. Built plug-and-play Go microservice for external IDPs (Okta, PingID) with real-time Grafana monitoring.",
+    technologies: ["Go", "OIDC/SAML", "Okta/PingID", "React", "Grafana", "PostgreSQL"],
+    achievements: "20+ enterprise partners onboarded, Pepsi doubled ad spend, 90% faster integration",
+    company: "Fetch Rewards",
+    category: "platform"
   },
   {
     id: 5,
@@ -117,7 +119,7 @@ function ContactSection() {
         >
           <h2 className="text-3xl font-bold mb-4 text-white">Get In Touch</h2>
           <p className="text-white/70 max-w-2xl mx-auto">
-            Let's build something amazing together. Open to Senior Engineer, Staff Engineer, and Technical Leadership roles.
+            Let&apos;s build something amazing together. Open to Senior Engineer, Staff Engineer, and Technical Leadership roles.
           </p>
         </motion.div>
         
@@ -388,7 +390,7 @@ export default function Home() {
                     <ArrowDown className="w-4 h-4 rotate-45" />
                   </div>
                 </div>
-                <div className="font-semibold leading-tight text-lg lg:text-xl relative z-10">🎯 PRODUCT-FOCUSED<br/>📊 DATA-DRIVEN<br/>🤖 APPLIED AI</div>
+                <div className="font-semibold leading-tight text-lg lg:text-xl relative z-10">PRODUCT-FOCUSED<br/>DATA-DRIVEN<br/>APPLIED AI</div>
               </button>
 
               {/* Green card */}
@@ -409,14 +411,14 @@ export default function Home() {
                     <ArrowDown className="w-4 h-4 rotate-45" />
                   </div>
                 </div>
-                <div className="font-semibold leading-tight text-lg lg:text-xl relative z-10">☁️ AWS • KUBERNETES<br/>⚡ MICROSERVICES<br/>🌐 DISTRIBUTED SYSTEMS</div>
+                <div className="font-semibold leading-tight text-lg lg:text-xl relative z-10">AWS • KUBERNETES<br/>MICROSERVICES<br/>DISTRIBUTED SYSTEMS</div>
               </button>
             </motion.div>
           </div>
         </section>
 
         {/* Super Bowl Impact Section */}
-        <section className="px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-r from-blue-900/20 to-purple-900/20">
+        <section className="px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-3xl mx-4 sm:mx-6 lg:mx-8 my-8">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -428,7 +430,7 @@ export default function Home() {
                 🏈 SUPER BOWL IMPACT
               </h2>
               <p className="text-lg text-white/70 max-w-3xl mx-auto">
-                Led the technical transformation that enabled Fetch Rewards to handle unprecedented Super Bowl traffic while maintaining zero downtime.
+                Led the technical transformation that enabled Fetch Rewards to handle unprecedented Super Bowl ad traffic surge while maintaining zero downtime and delivering seamless user experience.
               </p>
             </motion.div>
 
@@ -440,9 +442,9 @@ export default function Home() {
                 className="rounded-2xl p-8 border border-white/20 bg-gradient-to-br from-blue-500/10 to-purple-500/10"
               >
                 <div className="text-center mb-6">
-                  <div className="text-5xl font-extrabold text-white mb-2">133x</div>
+                  <div className="text-5xl font-extrabold text-white mb-2">13x</div>
                   <div className="text-sm text-white/60">TRAFFIC SURGE HANDLED</div>
-                  <div className="text-xs text-white/50 mt-1">600 RPS → 80K RPS</div>
+                  <div className="text-xs text-white/50 mt-1">6K RPS → 80K RPS</div>
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-white">🎯 Lead Architect Role</h3>
                 <ul className="text-white/70 text-sm space-y-2">
@@ -467,8 +469,8 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-4 text-white">⚡ Technical Innovation</h3>
                 <ul className="text-white/70 text-sm space-y-2">
                   <li>• Months of preparation & system optimization</li>
-                  <li>• Email & direct receipt integration scaling</li>
-                  <li>• Provider connectivity (Amazon, Gmail, Target)</li>
+                  <li>• Email & direct receipt integration scaling during ad</li>
+                  <li>• Provider connectivity (Amazon, Gmail, Target, Walmart)</li>
                   <li>• Performance monitoring during live event</li>
                 </ul>
               </motion.div>
@@ -755,34 +757,145 @@ export default function Home() {
                     ))}
                   </div>
                   
-                  {/* Other Core Projects */}
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {projects.filter(p => p.company === 'Fetch Rewards' && !p.category).map((project) => (
-                      <div
-                        key={project.id}
-                        className="rounded-2xl p-6 bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
-                      >
-                        <h4 className="text-lg font-semibold mb-3 text-white">{project.title}</h4>
-                        <p className="text-white/70 mb-4 text-sm leading-relaxed">{project.description}</p>
+                  {/* Core Platform Projects */}
+                  <div className="space-y-8">
+                    {/* Partner Platform */}
+                    {projects.filter(p => p.category === 'platform').map((project) => (
+                      <div key={project.id} className="rounded-2xl p-8 bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-400/30">
+                        <div className="flex items-center justify-between mb-6">
+                          <h4 className="text-2xl font-bold text-white">{project.title}</h4>
+                          <a 
+                            href="https://business.fetch.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="px-4 py-2 bg-green-500/20 text-green-200 rounded-lg hover:bg-green-500/30 transition-colors text-sm font-medium border border-green-400/30"
+                          >
+                            business.fetch.com ↗
+                          </a>
+                        </div>
+                        
+                        <div className="grid md:grid-cols-2 gap-6 mb-6">
+                          <div>
+                            <h5 className="text-lg font-semibold text-white mb-3">🏢 Enterprise Partners</h5>
+                            <div className="flex flex-wrap gap-2 mb-4">
+                              <span className="bg-green-500/20 text-green-200 px-3 py-1 rounded-full text-sm font-medium">Pepsi</span>
+                              <span className="bg-green-500/20 text-green-200 px-3 py-1 rounded-full text-sm font-medium">Kimberly Clark</span>
+                              <span className="bg-green-500/20 text-green-200 px-3 py-1 rounded-full text-sm font-medium">Unilever</span>
+                              <span className="bg-green-500/20 text-green-200 px-3 py-1 rounded-full text-sm font-medium">+17 More</span>
+                            </div>
+                            <p className="text-white/70 text-sm">{project.description}</p>
+                          </div>
+                          
+                          <div className="space-y-4">
+                            <div className="p-4 bg-white/10 rounded-lg">
+                              <div className="text-3xl font-bold text-white mb-1">2x</div>
+                              <div className="text-sm text-green-200">Pepsi Ad Spend Increase</div>
+                            </div>
+                            <div className="p-4 bg-white/10 rounded-lg">
+                              <div className="text-3xl font-bold text-white mb-1">20+</div>
+                              <div className="text-sm text-green-200">External IDP Integrations</div>
+                            </div>
+                          </div>
+                        </div>
                         
                         <div className="mb-4">
-                          <p className="text-sm font-medium text-purple-300 mb-3">
-                            🎯 {project.achievements}
+                          <p className="text-sm font-medium text-green-300 mb-3">
+                            🎯 Impact: {project.achievements}
                           </p>
                         </div>
                         
                         <div className="flex flex-wrap gap-2">
                           {project.technologies.map((tech) => (
-                            <span
-                              key={tech}
-                              className="bg-purple-500/20 text-purple-200 px-2 py-1 rounded text-xs font-medium border border-purple-400/20"
-                            >
+                            <span key={tech} className="bg-green-500/20 text-green-200 px-2 py-1 rounded text-xs font-medium border border-green-400/30">
                               {tech}
                             </span>
                           ))}
                         </div>
                       </div>
                     ))}
+                    
+                    {/* Product Catalog */}
+                    {projects.filter(p => p.category === 'catalog').map((project) => (
+                      <div key={project.id} className="rounded-2xl p-8 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-400/30">
+                        <h4 className="text-2xl font-bold text-white mb-6">{project.title}</h4>
+                        
+                        <div className="grid md:grid-cols-3 gap-6 mb-6">
+                          <div className="text-center p-4 bg-white/10 rounded-xl">
+                            <div className="text-3xl font-bold text-white mb-1">Millions</div>
+                            <div className="text-xs text-blue-200">Products Catalogued</div>
+                          </div>
+                          <div className="text-center p-4 bg-white/10 rounded-xl">
+                            <div className="text-3xl font-bold text-white mb-1">Real-time</div>
+                            <div className="text-xs text-blue-200">Updates & Ingestion</div>
+                          </div>
+                          <div className="text-center p-4 bg-white/10 rounded-xl">
+                            <div className="text-3xl font-bold text-white mb-1">FIDO</div>
+                            <div className="text-xs text-blue-200">Unique ID System</div>
+                          </div>
+                        </div>
+                        
+                        <div className="grid md:grid-cols-2 gap-6 mb-6">
+                          <div>
+                            <h5 className="text-lg font-semibold text-white mb-3">🔧 Technical Innovation</h5>
+                            <ul className="text-white/70 text-sm space-y-2">
+                              <li>• Multi-source ingestion (XLSX, CSV, web scraping)</li>
+                              <li>• Fuzzy matching algorithms for product identification</li>
+                              <li>• ML-powered deduplication & consolidation</li>
+                              <li>• FIDO system solving UPC length/format issues</li>
+                            </ul>
+                          </div>
+                          
+                          <div>
+                            <h5 className="text-lg font-semibold text-white mb-3">📊 Business Impact</h5>
+                            <ul className="text-white/70 text-sm space-y-2">
+                              <li>• 35% improvement in receipt-to-product matching</li>
+                              <li>• 60% faster partner data processing pipeline</li>
+                              <li>• 20% user engagement boost via search/recommendations</li>
+                              <li>• Enhanced partner confidence & reporting accuracy</li>
+                              <li>• Direct revenue increase through better matching</li>
+                            </ul>
+                          </div>
+                        </div>
+                        
+                        <div className="mb-4">
+                          <p className="text-sm font-medium text-blue-300 mb-3">
+                            🎯 Results: {project.achievements}
+                          </p>
+                        </div>
+                        
+                        <div className="flex flex-wrap gap-2">
+                          {project.technologies.map((tech) => (
+                            <span key={tech} className="bg-blue-500/20 text-blue-200 px-2 py-1 rounded text-xs font-medium border border-blue-400/30">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                    
+                    {/* Other Projects */}
+                    <div className="grid md:grid-cols-2 gap-6">
+                      {projects.filter(p => p.company === 'Fetch Rewards' && !p.category).map((project) => (
+                        <div key={project.id} className="rounded-2xl p-6 bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                          <h4 className="text-lg font-semibold mb-3 text-white">{project.title}</h4>
+                          <p className="text-white/70 mb-4 text-sm leading-relaxed">{project.description}</p>
+                          
+                          <div className="mb-4">
+                            <p className="text-sm font-medium text-purple-300 mb-3">
+                              🎯 {project.achievements}
+                            </p>
+                          </div>
+                          
+                          <div className="flex flex-wrap gap-2">
+                            {project.technologies.map((tech) => (
+                              <span key={tech} className="bg-purple-500/20 text-purple-200 px-2 py-1 rounded text-xs font-medium border border-purple-400/20">
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
                 
