@@ -52,7 +52,8 @@ function ContactSection() {
     setIsSubmitting(true)
     setError('')
     
-    const formData = new FormData(e.currentTarget)
+    const form = e.currentTarget
+    const formData = new FormData(form)
     const data = {
       name: formData.get('name') as string,
       email: formData.get('email') as string,
@@ -77,7 +78,7 @@ function ContactSection() {
 
       // Success
       setSubmitted(true)
-      e.currentTarget.reset()
+      form.reset()
       setTimeout(() => setSubmitted(false), 5000)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to send message. Please try again.')
