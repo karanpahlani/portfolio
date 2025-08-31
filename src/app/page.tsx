@@ -1026,7 +1026,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="rounded-3xl p-8 border border-white/10 bg-white/5 backdrop-blur-sm"
             >
-              <div className="calendly-inline-widget" data-url="https://calendly.com/pahlani/30min?background_color=0a0a0a&text_color=ffffff&primary_color=ff6a3d" style={{ minWidth: '320px', height: '500px' }}></div>
+              <div className="calendly-inline-widget" data-url="https://calendly.com/pahlani/30min?background_color=0a0a0a&text_color=ffffff&primary_color=ff6a3d" style={{ minWidth: '320px', height: '750px' }}></div>
               <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </motion.div>
           </div>
