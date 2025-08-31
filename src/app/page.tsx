@@ -10,14 +10,24 @@ import { useState } from "react"
 const projects = [
   {
     id: 1,
-    title: "Receipt Processing System",
-    description: "Engineered a resilient, asynchronous receipt processing system handling 80,000+ RPS during Super Bowl traffic.",
-    technologies: ["Go", "Java", "AWS SQS", "DynamoDB", "Redis"],
-    achievements: "10x traffic increase handling, $30K monthly cost savings",
-    company: "Fetch Rewards"
+    title: "🏈 Super Bowl Traffic Resilience",
+    description: "Led architectural transformation from synchronous to asynchronous receipt processing. Built resilient distributed system using Kafka & SQS replay mechanisms to handle 133x traffic surge (600 RPS → 80K RPS).",
+    technologies: ["Go", "Kafka", "AWS SQS", "DynamoDB", "Real-time Monitoring"],
+    achievements: "133x traffic scaling, Zero downtime during Super Bowl, Real-time incident response",
+    company: "Fetch Rewards",
+    category: "superbowl"
   },
   {
     id: 2,
+    title: "🧾 eReceipts DigiDetector Platform",
+    description: "Architected ML-powered receipt processing platform handling 80M+ weekly receipts from Amazon, Walmart, Target, Gmail, Outlook. Built Python microservices with SageMaker ML models achieving 97% item identification accuracy.",
+    technologies: ["Python", "AWS SageMaker", "Go Microservices", "ML Models", "Email Integration"],
+    achievements: "97% accuracy, 80M+ weekly receipts, 100x duplicate blocking improvement, 99.99% SLA",
+    company: "Fetch Rewards",
+    category: "digidetector"
+  },
+  {
+    id: 3,
     title: "Universal Product Catalog",
     description: "Architected a universal product catalog using Go microservices with PostgreSQL and DynamoDB.",
     technologies: ["Go", "Java Spring Boot", "PostgreSQL", "DynamoDB", "React"],
@@ -25,15 +35,15 @@ const projects = [
     company: "Fetch Rewards"
   },
   {
-    id: 3,
+    id: 4,
     title: "Self-Service Partner Platform",
     description: "Developed a comprehensive partner platform with Go authentication microservice (OIDC/SAML) and React dashboard.",
     technologies: ["Go", "OIDC/SAML", "PostgreSQL", "React"],
-    achievements: "90% reduction in integration time, 20% boost in engagement",
+    achievements: "90% faster integration time, 20% boost in engagement",
     company: "Fetch Rewards"
   },
   {
-    id: 4,
+    id: 5,
     title: "Resume Scraping & Scoring Tool",
     description: "Built a full-stack resume scraping and scoring tool that automated candidate sourcing for recruitment processes.",
     technologies: ["React", "Node.js", "Machine Learning", "Web Scraping"],
@@ -107,7 +117,7 @@ function ContactSection() {
         >
           <h2 className="text-3xl font-bold mb-4 text-white">Get In Touch</h2>
           <p className="text-white/70 max-w-2xl mx-auto">
-            Ready to discuss your next project?
+            Let's build something amazing together. Open to Senior Engineer, Staff Engineer, and Technical Leadership roles.
           </p>
         </motion.div>
         
@@ -327,7 +337,7 @@ export default function Home() {
               <div className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[110px] font-extrabold tracking-tight text-white leading-none">SOFTWARE</div>
               <div className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[110px] font-extrabold tracking-tight text-white/20 mb-8 leading-none">ENGINEER</div>
               <p className="max-w-3xl text-lg lg:text-xl text-white/70 leading-relaxed">
-                Senior Software Engineer with 5+ years at Fetch Rewards, driving architectural evolution from Java/MongoDB monoliths to Go microservices. Built systems handling 80,000+ RPS and led teams creating universal product catalogs.
+                Senior Software Engineer & Technical Leader who scaled Fetch Rewards from 1M to 12M+ monthly active users. Architected resilient systems handling 80K+ RPS, led engineering pods, and delivered $30K monthly cost savings through innovative solutions.
               </p>
             </motion.div>
 
@@ -339,16 +349,16 @@ export default function Home() {
               className="mb-8 grid grid-cols-3 gap-4 lg:gap-6"
             >
               <div>
-                <div className="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white mb-2">+6</div>
+                <div className="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white mb-2">6+</div>
                 <div className="text-xs lg:text-sm text-white/60 leading-tight">YEARS OF<br/>EXPERIENCE</div>
               </div>
               <div>
-                <div className="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white mb-2">+12</div>
-                <div className="text-xs lg:text-sm text-white/60 leading-tight">MILLION<br/>ACTIVE USERS</div>
+                <div className="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white mb-2">12M</div>
+                <div className="text-xs lg:text-sm text-white/60 leading-tight">MONTHLY<br/>ACTIVE USERS</div>
               </div>
               <div>
-                <div className="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white mb-2">+10</div>
-                <div className="text-xs lg:text-sm text-white/60 leading-tight">PROJECTS</div>
+                <div className="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white mb-2">80M</div>
+                <div className="text-xs lg:text-sm text-white/60 leading-tight">WEEKLY<br/>RECEIPTS</div>
               </div>
             </motion.div>
 
@@ -378,7 +388,7 @@ export default function Home() {
                     <ArrowDown className="w-4 h-4 rotate-45" />
                   </div>
                 </div>
-                <div className="font-semibold leading-tight text-lg lg:text-xl relative z-10">PRODUCT-FOCUSED<br/>DATA-DRIVEN<br/>APPLIED AI</div>
+                <div className="font-semibold leading-tight text-lg lg:text-xl relative z-10">🎯 PRODUCT-FOCUSED<br/>📊 DATA-DRIVEN<br/>🤖 APPLIED AI</div>
               </button>
 
               {/* Green card */}
@@ -399,8 +409,157 @@ export default function Home() {
                     <ArrowDown className="w-4 h-4 rotate-45" />
                   </div>
                 </div>
-                <div className="font-semibold leading-tight text-lg lg:text-xl relative z-10">AWS • KUBERNETES<br/>MICROSERVICES<br/>DISTRIBUTED SYSTEMS</div>
+                <div className="font-semibold leading-tight text-lg lg:text-xl relative z-10">☁️ AWS • KUBERNETES<br/>⚡ MICROSERVICES<br/>🌐 DISTRIBUTED SYSTEMS</div>
               </button>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Super Bowl Impact Section */}
+        <section className="px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-r from-blue-900/20 to-purple-900/20">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-6xl font-extrabold mb-6 text-white flex items-center justify-center gap-4">
+                🏈 SUPER BOWL IMPACT
+              </h2>
+              <p className="text-lg text-white/70 max-w-3xl mx-auto">
+                Led the technical transformation that enabled Fetch Rewards to handle unprecedented Super Bowl traffic while maintaining zero downtime.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="rounded-2xl p-8 border border-white/20 bg-gradient-to-br from-blue-500/10 to-purple-500/10"
+              >
+                <div className="text-center mb-6">
+                  <div className="text-5xl font-extrabold text-white mb-2">133x</div>
+                  <div className="text-sm text-white/60">TRAFFIC SURGE HANDLED</div>
+                  <div className="text-xs text-white/50 mt-1">600 RPS → 80K RPS</div>
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-white">🎯 Lead Architect Role</h3>
+                <ul className="text-white/70 text-sm space-y-2">
+                  <li>• Built resilience using Kafka & SQS replay mechanisms</li>
+                  <li>• Transformed synchronous to asynchronous processing</li>
+                  <li>• Orchestrated infrastructure scaling pre/post event</li>
+                  <li>• Provided real-time monitoring & incident response</li>
+                </ul>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="rounded-2xl p-8 border border-white/20 bg-gradient-to-br from-green-500/10 to-blue-500/10"
+              >
+                <div className="text-center mb-6">
+                  <div className="text-5xl font-extrabold text-white mb-2">0</div>
+                  <div className="text-sm text-white/60">MINUTES DOWNTIME</div>
+                  <div className="text-xs text-white/50 mt-1">During peak traffic</div>
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-white">⚡ Technical Innovation</h3>
+                <ul className="text-white/70 text-sm space-y-2">
+                  <li>• Months of preparation & system optimization</li>
+                  <li>• Email & direct receipt integration scaling</li>
+                  <li>• Provider connectivity (Amazon, Gmail, Target)</li>
+                  <li>• Performance monitoring during live event</li>
+                </ul>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* DigiDetector Platform Section */}
+        <section className="px-4 sm:px-6 lg:px-8 py-20">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-6xl font-extrabold mb-6 text-white flex items-center justify-center gap-4">
+                🧾 DIGIDETECTOR PLATFORM
+              </h2>
+              <p className="text-lg text-white/70 max-w-3xl mx-auto">
+                Engineered ML-powered receipt processing platform serving millions of users with industry-leading accuracy and scale.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-center p-4 rounded-2xl bg-white/5 border border-white/10"
+              >
+                <div className="text-3xl font-bold text-white mb-1">97%</div>
+                <div className="text-xs text-white/60">ACCURACY RATE</div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center p-4 rounded-2xl bg-white/5 border border-white/10"
+              >
+                <div className="text-3xl font-bold text-white mb-1">80M</div>
+                <div className="text-xs text-white/60">WEEKLY RECEIPTS</div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="text-center p-4 rounded-2xl bg-white/5 border border-white/10"
+              >
+                <div className="text-3xl font-bold text-white mb-1">100x</div>
+                <div className="text-xs text-white/60">DUPLICATE BLOCKING</div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="text-center p-4 rounded-2xl bg-white/5 border border-white/10"
+              >
+                <div className="text-3xl font-bold text-white mb-1">99.99%</div>
+                <div className="text-xs text-white/60">SLA MAINTAINED</div>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="rounded-3xl p-8 border border-white/20 bg-gradient-to-br from-purple-500/10 to-pink-500/10"
+            >
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-4">🎯 Technical Architecture</h3>
+                  <ul className="text-white/70 space-y-2 mb-6">
+                    <li>• AWS SageMaker ML models for item identification</li>
+                    <li>• Python microservices for receipt processing</li>
+                    <li>• Go microservices for high-performance APIs</li>
+                    <li>• Email integration (Gmail, Outlook, Yahoo)</li>
+                    <li>• Direct retailer APIs (Amazon, Walmart, Target)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-4">🚀 Business Impact</h3>
+                  <ul className="text-white/70 space-y-2 mb-6">
+                    <li>• 97% accuracy in item identification</li>
+                    <li>• Processing 80M+ receipts weekly</li>
+                    <li>• 100x improvement in duplicate detection</li>
+                    <li>• Maintained 99.99% reliability SLA</li>
+                    <li>• Enabled platform scaling to 12M+ MAU</li>
+                  </ul>
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>
@@ -416,22 +575,35 @@ export default function Home() {
             >
               <h2 className="display-1 font-extrabold mb-6 text-white">ABOUT</h2>
               <p className="text-lg text-white/70 max-w-3xl mx-auto">
-                Senior Software Engineer with a Master&apos;s degree, specializing in scalable, customer-centric applications. 
-                I have successfully driven the architectural evolution from a Java/MongoDB monolith to a distributed system of Go microservices.
+                Technical Leader & Senior Software Engineer who scaled consumer platforms from 1M to 12M+ monthly active users. 
+                Led engineering pods, mentored junior developers, and drove the architectural evolution from Java/MongoDB monoliths to distributed Go microservices.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="rounded-2xl p-6 border border-white/10 bg-white/5"
               >
-                <h3 className="text-xl font-semibold mb-3 text-white">Languages & Frameworks</h3>
-                <p className="text-white/70 text-sm">
-                  Go, Java, Python, JavaScript, TypeScript, React, NodeJS, Ruby on Rails, REST, gRPC
-                </p>
+                <h3 className="text-xl font-semibold mb-4 text-white flex items-center gap-2">
+                  💻 Core Technologies
+                </h3>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <span className="text-white font-medium">Backend:</span>
+                    <span className="text-white/70 ml-2">Go, Java, Python, Node.js, Ruby on Rails</span>
+                  </div>
+                  <div>
+                    <span className="text-white font-medium">Frontend:</span>
+                    <span className="text-white/70 ml-2">React, TypeScript, JavaScript</span>
+                  </div>
+                  <div>
+                    <span className="text-white font-medium">APIs:</span>
+                    <span className="text-white/70 ml-2">REST, gRPC, GraphQL</span>
+                  </div>
+                </div>
               </motion.div>
               
               <motion.div
@@ -440,24 +612,54 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="rounded-2xl p-6 border border-white/10 bg-white/5"
               >
-                <h3 className="text-xl font-semibold mb-3 text-white">Platforms & Architecture</h3>
-                <p className="text-white/70 text-sm">
-                  AWS (S3, SNS, SQS), Docker, Kubernetes, Kafka, Microservices, Distributed Systems, Terraform
-                </p>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="rounded-2xl p-6 border border-white/10 bg-white/5"
-              >
-                <h3 className="text-xl font-semibold mb-3 text-white">Databases & Tools</h3>
-                <p className="text-white/70 text-sm">
-                  PostgreSQL, DynamoDB, MongoDB, Redis, Snowflake, CI/CD, Grafana, PagerDuty
-                </p>
+                <h3 className="text-xl font-semibold mb-4 text-white flex items-center gap-2">
+                  ☁️ Infrastructure & Data
+                </h3>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <span className="text-white font-medium">Cloud:</span>
+                    <span className="text-white/70 ml-2">AWS (SQS, S3, SageMaker), Docker, Kubernetes</span>
+                  </div>
+                  <div>
+                    <span className="text-white font-medium">Databases:</span>
+                    <span className="text-white/70 ml-2">PostgreSQL, DynamoDB, MongoDB, Redis</span>
+                  </div>
+                  <div>
+                    <span className="text-white font-medium">Messaging:</span>
+                    <span className="text-white/70 ml-2">Kafka, AWS SQS, Event-Driven Architecture</span>
+                  </div>
+                </div>
               </motion.div>
             </div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="rounded-2xl p-8 border border-white/20 bg-gradient-to-r from-orange-500/10 to-red-500/10"
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-white flex items-center gap-2">
+                👥 Leadership & Impact
+              </h3>
+              <p className="text-white/70 leading-relaxed mb-4">
+                Led small engineering pods and drove cross-team initiatives, mentoring junior engineers and setting coding/design standards. 
+                Focused on setting clear goals, building trust, and empowering engineers to take ownership rather than micromanaging.
+              </p>
+              <div className="grid md:grid-cols-3 gap-4 text-center">
+                <div className="p-4 bg-white/5 rounded-xl">
+                  <div className="text-2xl font-bold text-white">$30K</div>
+                  <div className="text-xs text-white/60">Monthly Savings Achieved</div>
+                </div>
+                <div className="p-4 bg-white/5 rounded-xl">
+                  <div className="text-2xl font-bold text-white">1M→12M</div>
+                  <div className="text-xs text-white/60">User Growth Enabled</div>
+                </div>
+                <div className="p-4 bg-white/5 rounded-xl">
+                  <div className="text-2xl font-bold text-white">5+</div>
+                  <div className="text-xs text-white/60">Engineers Mentored</div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
@@ -501,91 +703,155 @@ export default function Home() {
                 </div>
                 
                 {/* Key Metrics */}
-                <div className="grid grid-cols-3 gap-6 mb-8">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-white mb-1">80K+</div>
-                    <div className="text-sm text-white/60">RPS Handled</div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                  <div className="text-center p-4 bg-white/5 rounded-xl">
+                    <div className="text-2xl font-bold text-white mb-1">80K+</div>
+                    <div className="text-xs text-white/60">RPS Handled</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-white mb-1">$30K</div>
-                    <div className="text-sm text-white/60">Monthly Savings</div>
+                  <div className="text-center p-4 bg-white/5 rounded-xl">
+                    <div className="text-2xl font-bold text-white mb-1">$30K</div>
+                    <div className="text-xs text-white/60">Monthly Savings</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-white mb-1">90%</div>
-                    <div className="text-sm text-white/60">Time Reduction</div>
+                  <div className="text-center p-4 bg-white/5 rounded-xl">
+                    <div className="text-2xl font-bold text-white mb-1">90%</div>
+                    <div className="text-xs text-white/60">Faster Integration</div>
+                  </div>
+                  <div className="text-center p-4 bg-white/5 rounded-xl">
+                    <div className="text-2xl font-bold text-white mb-1">1M→12M</div>
+                    <div className="text-xs text-white/60">Users Scaled</div>
                   </div>
                 </div>
                 
-                {/* Projects Grid */}
-                <div className="grid md:grid-cols-2 gap-6">
-                  {projects.filter(p => p.company === 'Fetch Rewards').map((project) => (
-                    <div
-                      key={project.id}
-                      className="rounded-2xl p-6 bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
-                    >
-                      <h4 className="text-lg font-semibold mb-3 text-white">{project.title}</h4>
-                      <p className="text-white/70 mb-4 text-sm leading-relaxed">{project.description}</p>
-                      
-                      <div className="mb-4">
-                        <p className="text-sm font-medium text-purple-300 mb-3">
-                          🎯 {project.achievements}
-                        </p>
+                {/* Featured Projects Grid */}
+                <div className="space-y-6">
+                  {/* Super Bowl & DigiDetector - Featured */}
+                  <div className="grid md:grid-cols-2 gap-6 mb-8">
+                    {projects.filter(p => p.category === 'superbowl' || p.category === 'digidetector').map((project) => (
+                      <div
+                        key={project.id}
+                        className="rounded-2xl p-6 bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/30 hover:border-purple-400/50 transition-all duration-300"
+                      >
+                        <h4 className="text-xl font-bold mb-3 text-white">{project.title}</h4>
+                        <p className="text-white/80 mb-4 text-sm leading-relaxed">{project.description}</p>
+                        
+                        <div className="mb-4 p-3 bg-white/10 rounded-lg">
+                          <p className="text-sm font-medium text-purple-200 mb-1">
+                            🚀 Impact:
+                          </p>
+                          <p className="text-xs text-purple-100">{project.achievements}</p>
+                        </div>
+                        
+                        <div className="flex flex-wrap gap-2">
+                          {project.technologies.map((tech) => (
+                            <span
+                              key={tech}
+                              className="bg-purple-500/30 text-purple-100 px-2 py-1 rounded text-xs font-medium border border-purple-400/40"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-                      
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech) => (
-                          <span
-                            key={tech}
-                            className="bg-purple-500/20 text-purple-200 px-2 py-1 rounded text-xs font-medium border border-purple-400/20"
-                          >
-                            {tech}
-                          </span>
-                        ))}
+                    ))}
+                  </div>
+                  
+                  {/* Other Core Projects */}
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {projects.filter(p => p.company === 'Fetch Rewards' && !p.category).map((project) => (
+                      <div
+                        key={project.id}
+                        className="rounded-2xl p-6 bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
+                      >
+                        <h4 className="text-lg font-semibold mb-3 text-white">{project.title}</h4>
+                        <p className="text-white/70 mb-4 text-sm leading-relaxed">{project.description}</p>
+                        
+                        <div className="mb-4">
+                          <p className="text-sm font-medium text-purple-300 mb-3">
+                            🎯 {project.achievements}
+                          </p>
+                        </div>
+                        
+                        <div className="flex flex-wrap gap-2">
+                          {project.technologies.map((tech) => (
+                            <span
+                              key={tech}
+                              className="bg-purple-500/20 text-purple-200 px-2 py-1 rounded text-xs font-medium border border-purple-400/20"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
                       </div>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Key Technologies & Consumer Impact */}
+                <div className="mt-8 p-8 bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-2xl border border-white/20">
+                  <h4 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+                    🎆 Consumer-First Engineering Excellence
+                  </h4>
+                  <div className="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                      <h5 className="text-lg font-semibold text-white mb-3">👥 Consumer Impact</h5>
+                      <ul className="text-white/70 text-sm space-y-1">
+                        <li>• Scaled platform from 1M → 12M monthly active users</li>
+                        <li>• Processed 80M+ receipts weekly with 99.99% reliability</li>
+                        <li>• Enabled seamless receipt scanning during Super Bowl</li>
+                        <li>• Delivered 97% accuracy in receipt item identification</li>
+                      </ul>
                     </div>
-                  ))}
-                </div>
-                
-                {/* Key Technologies */}
-                <div className="mt-8 p-6 bg-white/5 rounded-2xl border border-white/10">
-                  <h4 className="text-lg font-semibold text-white mb-4">Specialized in Catalog & Receipt Processing Systems</h4>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="bg-blue-500/20 text-blue-200 px-3 py-1 rounded-full text-sm font-medium">Go Microservices</span>
-                    <span className="bg-green-500/20 text-green-200 px-3 py-1 rounded-full text-sm font-medium">Java Spring</span>
-                    <span className="bg-orange-500/20 text-orange-200 px-3 py-1 rounded-full text-sm font-medium">AWS (SQS, DynamoDB)</span>
-                    <span className="bg-purple-500/20 text-purple-200 px-3 py-1 rounded-full text-sm font-medium">PostgreSQL</span>
-                    <span className="bg-pink-500/20 text-pink-200 px-3 py-1 rounded-full text-sm font-medium">Partner Platform</span>
+                    <div>
+                      <h5 className="text-lg font-semibold text-white mb-3">🔧 Technical Excellence</h5>
+                      <ul className="text-white/70 text-sm space-y-1">
+                        <li>• Monolith → Microservices transformation</li>
+                        <li>• Event-driven architecture with Kafka & SQS</li>
+                        <li>• ML-powered processing with AWS SageMaker</li>
+                        <li>• Multi-provider integrations (Amazon, Gmail, Target)</li>
+                      </ul>
+                    </div>
                   </div>
-                  <p className="text-white/70 text-sm">
-                    Led transformation from Java/MongoDB monolith to distributed Go microservices, specializing in catalog and receipt processing systems that serve millions of users.
-                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="bg-blue-500/20 text-blue-200 px-3 py-1 rounded-full text-sm font-medium">Go Microservices</span>
+                    <span className="bg-green-500/20 text-green-200 px-3 py-1 rounded-full text-sm font-medium">AWS SageMaker</span>
+                    <span className="bg-orange-500/20 text-orange-200 px-3 py-1 rounded-full text-sm font-medium">Kafka + SQS</span>
+                    <span className="bg-purple-500/20 text-purple-200 px-3 py-1 rounded-full text-sm font-medium">Python ML</span>
+                    <span className="bg-pink-500/20 text-pink-200 px-3 py-1 rounded-full text-sm font-medium">Receipt Processing</span>
+                    <span className="bg-cyan-500/20 text-cyan-200 px-3 py-1 rounded-full text-sm font-medium">Partner APIs</span>
+                  </div>
                 </div>
               </div>
             </motion.div>
             
-            {/* Other Experience */}
+            {/* Previous Experience */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="rounded-3xl p-6 border border-white/10 bg-white/5"
+              className="rounded-3xl p-8 border border-white/10 bg-gradient-to-r from-indigo-500/10 to-purple-500/10"
             >
-              <h4 className="text-xl font-semibold mb-4 text-white">Additional Experience</h4>
+              <h4 className="text-2xl font-bold mb-6 text-white flex items-center gap-2">
+                💼 Previous Experience & Innovation
+              </h4>
               {projects.filter(p => p.company !== 'Fetch Rewards').map((project) => (
-                <div key={project.id} className="border-l-4 border-[var(--accent)] pl-6 mb-6 last:mb-0">
-                  <div className="flex items-center gap-2 mb-2">
-                    <h5 className="text-lg font-medium text-white">{project.title}</h5>
-                    <span className="px-2 py-1 rounded bg-[var(--accent)]/20 text-[var(--accent)] text-xs font-medium">
+                <div key={project.id} className="border-l-4 border-orange-500 pl-6 mb-6 last:mb-0 bg-white/5 rounded-r-xl p-4">
+                  <div className="flex items-center gap-2 mb-3">
+                    <h5 className="text-xl font-semibold text-white">🤖 {project.title}</h5>
+                    <span className="px-3 py-1 rounded-full bg-orange-500/20 text-orange-200 text-xs font-medium border border-orange-400/30">
                       {project.company}
                     </span>
                   </div>
-                  <p className="text-white/70 mb-3 text-sm">{project.description}</p>
-                  <p className="text-sm text-[var(--acid)] mb-3">🎯 {project.achievements}</p>
+                  <p className="text-white/80 mb-4 text-sm leading-relaxed">{project.description}</p>
+                  <div className="mb-4 p-3 bg-white/10 rounded-lg">
+                    <p className="text-sm font-medium text-green-300">
+                      🚀 Business Impact: {project.achievements}
+                    </p>
+                  </div>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="bg-white/10 text-white/80 px-2 py-1 rounded text-xs font-medium border border-white/20"
+                        className="bg-indigo-500/20 text-indigo-200 px-2 py-1 rounded text-xs font-medium border border-indigo-400/30"
                       >
                         {tech}
                       </span>
@@ -593,6 +859,17 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+              
+              {/* Career Progression Highlight */}
+              <div className="mt-8 p-6 bg-white/10 rounded-xl border border-white/20">
+                <h5 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                  📈 Career Trajectory
+                </h5>
+                <p className="text-white/70 text-sm leading-relaxed">
+                  Progressed from building recruitment automation tools to leading large-scale consumer platforms. 
+                  Consistently delivered measurable business impact through technical innovation and leadership.
+                </p>
+              </div>
             </motion.div>
           </div>
         </section>
