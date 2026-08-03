@@ -354,7 +354,7 @@ export default function Home() {
               <div className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[110px] font-extrabold tracking-tight text-white leading-none">SOFTWARE</div>
               <div className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[110px] font-extrabold tracking-tight text-white/20 mb-8 leading-none">ENGINEER</div>
               <p className="max-w-3xl text-lg lg:text-xl text-white/70 leading-relaxed">
-                Senior Software Engineer & Technical Leader who scaled Fetch Rewards from 1M to 12M+ monthly active users. Architected resilient systems handling 80K+ RPS, led engineering pods, and delivered $30K monthly cost savings through innovative solutions.
+                Software Engineer on SoFi&apos;s Home Loans team, building on 5+ years scaling Fetch Rewards from 1M to 12M+ monthly active users. Architected resilient systems handling 80K+ RPS, led engineering pods, and delivered $30K monthly cost savings through innovative solutions.
               </p>
             </motion.div>
 
@@ -693,6 +693,50 @@ export default function Home() {
               <h2 className="display-2 font-extrabold text-white/30 mb-6">EXPERIENCE</h2>
             </motion.div>
             
+            {/* SoFi - Current Role */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="mb-8"
+            >
+              <div className="rounded-3xl p-8 border border-blue-400/30 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 relative overflow-hidden">
+                <div className="flex items-center justify-between flex-wrap gap-4 mb-4">
+                  <div className="flex items-center gap-4">
+                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center">
+                      <span className="text-[#00A4E4] font-extrabold text-2xl tracking-tight">SoFi</span>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-1">SoFi</h3>
+                      <p className="text-white/60">Software Engineer, Home Loans · Seattle, WA</p>
+                      <a href="https://www.sofi.com" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-blue-200 transition-colors text-sm">
+                        sofi.com ↗
+                      </a>
+                    </div>
+                  </div>
+                  <span className="px-4 py-1.5 rounded-full bg-green-500/20 text-green-300 text-sm font-medium border border-green-400/30 whitespace-nowrap">
+                    December 2025 - Present
+                  </span>
+                </div>
+                <p className="text-white/70 leading-relaxed">
+                  Contributing to SoFi&apos;s Home Loans team, building on 5+ years of backend and distributed systems experience at Fetch Rewards to help people get their money right.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Leo - Brief */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="flex items-center justify-between flex-wrap gap-2 border-l-2 border-white/10 pl-4 mb-12 text-sm"
+            >
+              <p className="text-white/60">
+                <span className="text-white/80 font-medium">Engineering Lead, Systems Reliability &amp; Platform</span> at Leo · Palo Alto, CA
+              </p>
+              <span className="text-white/40 whitespace-nowrap">September - December 2025</span>
+            </motion.div>
+
             {/* Fetch Rewards Featured Section */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -711,7 +755,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-1">Fetch Rewards</h3>
-                      <p className="text-white/60">5 Years of Professional Growth • July 2020 - Present</p>
+                      <p className="text-white/60">5 Years of Professional Growth • July 2020 - August 2025</p>
                       <a href="https://fetch.com" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 transition-colors text-sm">
                         fetch.com ↗
                       </a>
@@ -1083,7 +1127,7 @@ export default function Home() {
 
               {/* Copyright */}
               <div className="text-center md:text-right">
-                <p className="text-white/50 text-sm mb-1">© 2024 Karan Pahlani</p>
+                <p className="text-white/50 text-sm mb-1">© {new Date().getFullYear()} Karan Pahlani</p>
                 <p className="text-white/30 text-xs">Built with Next.js & Tailwind CSS</p>
               </div>
             </motion.div>
