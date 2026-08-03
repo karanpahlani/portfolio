@@ -724,7 +724,7 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Leo - Brief */}
+            {/* Percuity - Brief */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -732,7 +732,7 @@ export default function Home() {
               className="flex items-center justify-between flex-wrap gap-2 border-l-2 border-white/10 pl-4 mb-12 text-sm"
             >
               <p className="text-white/60">
-                <span className="text-white/80 font-medium">Engineering Lead, Systems Reliability &amp; Platform</span> at Leo · Palo Alto, CA
+                <span className="text-white/80 font-medium">Engineering Lead, Systems Reliability &amp; Platform</span> at Percuity · Palo Alto, CA
               </p>
               <span className="text-white/40 whitespace-nowrap">September - December 2025</span>
             </motion.div>

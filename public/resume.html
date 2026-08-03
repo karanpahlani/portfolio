@@ -87,7 +87,7 @@
         
         @media print {
             @page {
-                margin: 1cm;
+                margin: 0.4cm;
                 size: A4;
             }
             body { 
@@ -99,11 +99,11 @@
                 background: white !important;
                 padding: 0 !important;
             }
-            .a4-container { 
-                margin: 0; 
-                padding: 20px;
-                box-shadow: none !important; 
-                border: none; 
+            .a4-container {
+                margin: 0;
+                padding: 8px;
+                box-shadow: none !important;
+                border: none;
                 border-radius: 0 !important;
                 max-width: none !important;
                 width: 100% !important;
@@ -190,7 +190,7 @@
         <div class="a4-container">
         
         <!-- Header -->
-        <header class="text-center pb-4 border-b border-gray-200">
+        <header class="text-center pb-2 border-b border-gray-200">
             <h1 class="text-3xl font-bold text-gray-800 tracking-tight">KARAN PAHLANI</h1>
             <h2 class="text-lg font-medium text-gray-600 mt-1">Senior Software Engineer</h2>
             <div class="flex justify-center items-center space-x-4 mt-2 text-xs text-gray-600">
@@ -205,112 +205,71 @@
         </header>
 
         <!-- Professional Summary -->
-        <section class="mt-4">
+        <section class="mt-2">
             <p class="text-gray-700 text-xs text-center text-justify leading-relaxed">
                 Software Engineer on SoFi's Home Loans team, with a Master's and 5+ years at Fetch Rewards specializing in scalable, customer-centric applications. I drove the architectural evolution from a <b>Java/MongoDB</b> monolith to a distributed system of <b>Go</b> microservices, strategically adopting specialized databases like <b>PostgreSQL</b>, <b>DynamoDB</b>, and <b>Redis</b>. This transformation unlocked significant gains in scalability, deployment frequency, and developer productivity. Experienced in A/B testing and data-driven optimization to improve user acquisition and deliver business-critical outcomes.
             </p>
         </section>
 
         <!-- Technical Skills -->
-        <section class="mt-4">
+        <section class="mt-2">
             <h3 class="text-sm font-bold text-gray-700 uppercase tracking-wider mb-2 border-b pb-1">Technical Skills</h3>
             <div class="text-xs text-gray-700 space-y-1">
-                <p><b>Core Competencies:</b> Product-Focused Engineering | Data-Driven Decisions | Applied AI</p>
-                <p><b>Languages & Frameworks:</b> Go, Java, Python, JavaScript, TypeScript, React, NodeJS, Ruby on Rails, REST, gRPC</p>
+                <p><b>Core Competencies:</b> Product-Focused Engineering | Data-Driven Decisions</p>
+                <p><b>Languages & Frameworks:</b> Go, Java, Python, Kotlin, JavaScript, TypeScript, React, NodeJS, REST, gRPC</p>
                 <p><b>Platforms & Architecture:</b> AWS (S3, SNS, SQS), Docker, Kubernetes, Kafka, Microservices, Distributed Systems, Terraform</p>
-                <p><b>DB & Tools:</b> PostgreSQL, DynamoDB, MongoDB, Redis, Snowflake, CI/CD (BitBucket Pipelines), Grafana, OpenTelemetry, PagerDuty</p>
+                <p><b>DB & Tools:</b> PostgreSQL, DynamoDB, MongoDB, Redis, Snowflake, CI/CD, Grafana, OpenTelemetry, Datadog, PagerDuty</p>
             </div>
         </section>
 
         <!-- Professional Experience -->
-        <section class="mt-4">
+        <section class="mt-2">
             <h3 class="text-sm font-bold text-gray-700 uppercase tracking-wider mb-2 border-b pb-1">Professional Experience</h3>
 
             <!-- SoFi -->
-            <div class="mb-4">
+            <div class="mb-2">
                 <div class="flex justify-between items-baseline">
                     <h4 class="text-sm font-bold text-gray-800">SoFi</h4>
                     <span class="text-xs font-medium text-gray-500">December 2025 – Present</span>
                 </div>
                 <p class="text-xs text-gray-600 font-semibold">Software Engineer, Home Loans</p>
-                <ul class="list-disc list-outside mt-1 ml-4 text-xs text-gray-700 space-y-1.5">
-                    <li>Contributing to the Home Loans team&rsquo;s backend systems, supporting a mission focused on helping people get their money right.</li>
+                <ul class="list-disc list-outside mt-1 ml-4 text-xs text-gray-700 space-y-1">
+                    <li>Built the backend and frontend POC for a prospect-to-offer matching flow on the HELOC application (<b>Kotlin</b>, Offer Platform integration, PII-based identity matching), including a security review of the sensitive data flow, and root-caused/fixed an attribution bug that was breaking downstream lead routing to Loan Officers and Salesforce.</li>
+                    <li>Root-caused and fixed a production incident where an unintended caller triggered <b>1,600+</b> expensive name-lookup calls against the Offer Platform in 7 minutes, shipping a query-parameter + feature-flag gate to restrict the fallback to legitimate traffic.</li>
+                    <li>Led backend integration to expand a home equity loan product into New York, coordinating changes across Encompass, Blend, auto-assignment routing, and appraisal/title vendor systems, and owned the production readiness checklist for launch.</li>
                 </ul>
             </div>
 
-            <!-- Leo -->
-            <div class="mb-4">
+            <!-- Percuity -->
+            <div class="mb-2">
                 <div class="flex justify-between items-baseline">
-                    <h4 class="text-sm font-bold text-gray-800">Leo</h4>
+                    <h4 class="text-sm font-bold text-gray-800">Percuity</h4>
                     <span class="text-xs font-medium text-gray-500">September 2025 – December 2025</span>
                 </div>
                 <p class="text-xs text-gray-600 font-semibold">Engineering Lead, Systems Reliability &amp; Platform</p>
-                <ul class="list-disc list-outside mt-1 ml-4 text-xs text-gray-700 space-y-1.5">
+                <ul class="list-disc list-outside mt-1 ml-4 text-xs text-gray-700 space-y-1">
                     <li>Led infrastructure and platform engineering on <b>AWS</b> (<b>Terraform</b>, <b>ECS Fargate</b>, <b>Lambda</b>, <b>DynamoDB</b>), building <b>CI/CD</b> pipelines and driving observability and incident response practices with <b>Datadog</b> and <b>OpenTelemetry</b>.</li>
                 </ul>
             </div>
 
             <!-- Fetch -->
-            <div class="mb-4">
-                <h4 class="text-sm font-bold text-gray-800">Fetch Rewards</h4>
-
-                <div class="mt-2">
-                    <div class="flex justify-between items-baseline">
-                        <p class="text-xs text-gray-600 font-semibold">Senior Software Engineer</p>
-                        <span class="text-xs font-medium text-gray-500">July 2024 – August 2025</span>
-                    </div>
-                    <ul class="list-disc list-outside mt-1 ml-4 text-xs text-gray-700 space-y-1.5">
-                        <li>Engineered a resilient, asynchronous receipt processing system using <b>Java and Go</b> microservices, <b>AWS SQS</b>, <b>DynamoDB</b>, and <b>Redis</b>. This architecture was critical for scaling to handle Super Bowl ad traffic, successfully managing peaks of over <b>80,000 RPS</b> (a <b>10x</b> increase).</li>
-                        <li>Architected a data aggregation service that cut ML parsing costs by <b>$30K</b> per month by deduplicating emails <b>100x</b>. Spearheaded the e-receipts 2.0 launch in <b>Go</b>, overhauling its monitoring with <b>OpenTelemetry</b>, <b>Grafana</b>, and <b>HostedGraphite</b>, boosting user engagement by <b>40%</b> while cutting fraud by <b>70%</b>.</li>
-                    </ul>
-                </div>
-
-                <div class="mt-2">
-                    <div class="flex justify-between items-baseline">
-                        <p class="text-xs text-gray-600 font-semibold">Team Lead</p>
-                        <span class="text-xs font-medium text-gray-500">Jan 2022 – July 2024</span>
-                    </div>
-                    <ul class="list-disc list-outside mt-1 ml-4 text-xs text-gray-700 space-y-1.5">
-                        <li>Led a full-stack team to architect a universal product catalog using <b>Go</b> microservices with <b>PostgreSQL</b> and <b>DynamoDB</b>, boosting offer matching accuracy by <b>35%</b>. Built a <b>Java Spring Batch</b> ingestion pipeline and a <b>React</b> dashboard to manage product data, which accelerated partner data processing by <b>60%</b> and reduced ingestion errors by <b>30%</b>.</li>
-                    </ul>
-                </div>
-
-                <div class="mt-2">
-                    <div class="flex justify-between items-baseline">
-                        <p class="text-xs text-gray-600 font-semibold">Software Engineer II</p>
-                        <span class="text-xs font-medium text-gray-500">May 2021 – Jan 2022</span>
-                    </div>
-                    <ul class="list-disc list-outside mt-1 ml-4 text-xs text-gray-700 space-y-1.5">
-                        <li>Developed a self-service partner platform with a <b>Go</b> authentication microservice (OIDC/SAML, <b>PostgreSQL</b>) that cut integration time by <b>90%</b>, and built a <b>React</b> dashboard for marketing to manage campaigns and monitor real-time offer performance, boosting engagement by <b>20%</b>.</li>
-                    </ul>
-                </div>
-
-                <div class="mt-2">
-                    <div class="flex justify-between items-baseline">
-                        <p class="text-xs text-gray-600 font-semibold">Software Engineer</p>
-                        <span class="text-xs font-medium text-gray-500">July 2020 – May 2021</span>
-                    </div>
-                    <ul class="list-disc list-outside mt-1 ml-4 text-xs text-gray-700 space-y-1.5">
-                        <li>Drove a <b>15%</b> increase in user acquisition by building the phone number onboarding flow in <b>Go</b>, leveraging <b>AWS SNS</b> to reduce SMS delivery failures. Also developed a <b>React</b> support dashboard that cut ticket handling time by <b>25%</b>.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Edammo Inc -->
-            <div class="mb-4">
+            <div class="mb-2">
                 <div class="flex justify-between items-baseline">
-                    <h4 class="text-sm font-bold text-gray-800">Edammo Inc.</h4>
-                    <span class="text-xs font-medium text-gray-500">June 2019 – August 2019</span>
+                    <h4 class="text-sm font-bold text-gray-800">Fetch Rewards</h4>
+                    <span class="text-xs font-medium text-gray-500">July 2020 – August 2025</span>
                 </div>
-                <p class="text-xs text-gray-600 font-semibold">Software Development Intern</p>
-                <ul class="list-disc list-outside mt-2 ml-4 text-xs text-gray-700">
-                    <li>Built a full-stack resume scraping and scoring tool (<b>React</b>, <b>NodeJS</b>) that automated candidate sourcing, reducing initial screening time by <b>40%</b>.</li>
+                <p class="text-xs text-gray-600 font-semibold">Senior Software Engineer &rarr; Team Lead &rarr; Software Engineer II &rarr; Software Engineer</p>
+                <ul class="list-disc list-outside mt-1 ml-4 text-xs text-gray-700 space-y-1">
+                    <li>Engineered a resilient, asynchronous receipt processing system (<b>Java/Go</b> microservices, <b>AWS SQS</b>, <b>DynamoDB</b>, <b>Redis</b>) that scaled to over <b>80,000 RPS</b> (a <b>10x</b> increase) during Super Bowl ad campaigns with zero downtime.</li>
+                    <li>Built an ML-powered receipt platform (<b>Python</b>, <b>AWS SageMaker</b>) processing <b>80M+</b> weekly receipts at <b>97%</b> item-identification accuracy; architected a data aggregation service cutting ML parsing costs by <b>$30K/month</b> via <b>100x</b> email deduplication.</li>
+                    <li>Led a team to architect a universal product catalog (<b>Go</b>, <b>PostgreSQL</b>, <b>DynamoDB</b>) boosting offer-matching accuracy by <b>35%</b>; built a <b>Java Spring Batch</b> ingestion pipeline and <b>React</b> dashboard accelerating partner data processing by <b>60%</b>.</li>
+                    <li>Developed a self-service partner auth platform (<b>Go</b>, OIDC/SAML) cutting integration time by <b>90%</b> for <b>20+</b> enterprise partners; built the <b>Go</b>/<b>AWS SNS</b> phone-number onboarding flow that drove a <b>15%</b> increase in user acquisition.</li>
                 </ul>
             </div>
         </section>
 
         <!-- Education -->
-        <section class="mt-4">
+        <section class="mt-2">
             <h3 class="text-sm font-bold text-gray-700 uppercase tracking-wider mb-2 border-b pb-1">Education</h3>
             <div class="text-xs">
                 <div class="flex justify-between">
