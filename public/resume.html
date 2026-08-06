@@ -206,7 +206,7 @@
 
         <!-- Professional Summary -->
         <section class="mt-1.5">
-            <p class="text-gray-700 text-xs text-center text-justify leading-relaxed">
+            <p class="text-gray-700 text-xs text-center text-justify leading-snug">
                 Software Engineer on SoFi's Home Loans team, with a Master's and 5+ years at Fetch Rewards specializing in scalable, customer-centric applications. I drove the architectural evolution from a <b>Java/MongoDB</b> monolith to a distributed system of <b>Go</b> microservices, strategically adopting specialized databases like <b>PostgreSQL</b>, <b>DynamoDB</b>, and <b>Redis</b>. This transformation unlocked significant gains in scalability, deployment frequency, and developer productivity. Experienced in A/B testing and data-driven optimization to improve user acquisition and deliver business-critical outcomes.
             </p>
         </section>
@@ -235,7 +235,7 @@
                 <p class="text-xs text-gray-600 font-semibold">Software Engineer, Home Loans</p>
                 <ul class="list-disc list-outside mt-1 ml-4 text-xs text-gray-700 space-y-0.5 leading-snug">
                     <li>Designed and delivered the end-to-end offer-matching experience for SoFi's HELOC application &mdash; building both the <b>Kotlin</b> backend and the frontend prototype to match prospects to pre-qualified offers through PII-based identity resolution. Partnered with security to certify the sensitive data flow and eliminated a critical attribution defect that had been silently breaking lead routing to loan officers and Salesforce.</li>
-                    <li>Diagnosed and resolved a production incident in which an unintended caller triggered <b>1,600+</b> costly identity-lookup calls in under seven minutes, introducing a feature-flagged request gate that confined the expensive path to legitimate traffic and eliminated the load.</li>
+                    <li>Owned reliability and observability across Home Loans backends: migrated the hl-ui error-rate monitor and full <b>SLO</b> into Terraform-managed <b>Signalfire</b> with a composite traffic-floor gate that cut <b>~21</b> false-positive on-call pages per rotation, and instrumented the webhook and <b>Temporal</b> workflow paths with structured logging, correlation IDs, and failure metrics to speed incident debugging.</li>
                     <li>Led the backend effort to launch SoFi's home equity product in New York, coordinating changes across loan origination, application intake, underwriting routing, and appraisal/title vendor integrations, and owning the production-readiness plan through a clean launch.</li>
                 </ul>
             </div>
