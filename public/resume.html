@@ -207,7 +207,7 @@
         <!-- Professional Summary -->
         <section class="mt-1.5">
             <p class="text-gray-700 text-xs text-center text-justify leading-snug">
-                Senior Software Engineer with a Master's and 5+ years building high-scale distributed systems, progressing from engineer to team lead while re-architecting a <b>Java/MongoDB</b> monolith into <b>Go</b> microservices that sustained <b>80,000+ RPS</b>. Now engineering backend systems for SoFi's Home Loans business &mdash; shipping customer-facing features and owning production reliability across <b>Kotlin</b>, <b>Go</b>, and <b>AWS</b>.
+                Senior Software Engineer with a Master's and 6+ years building high-scale distributed systems, progressing from engineer to team lead while re-architecting a <b>Java/MongoDB</b> monolith into <b>Go</b> microservices that sustained <b>80,000+ RPS</b>. Now engineering backend systems for SoFi's Home Loans business &mdash; shipping customer-facing features and owning production reliability across <b>Kotlin</b>, <b>Go</b>, and <b>AWS</b>.
             </p>
         </section>
 
@@ -222,49 +222,45 @@
             </div>
         </section>
 
-        <!-- Professional Experience -->
-        <section class="mt-1.5">
-            <h3 class="text-sm font-bold text-gray-700 uppercase tracking-wider mb-1 border-b pb-1">Professional Experience</h3>
+        <!-- Experience -->
+        <section class="mt-3">
+            <h3 class="text-sm font-bold text-gray-700 uppercase tracking-wider mb-1 border-b pb-1">Experience</h3>
 
             <!-- SoFi -->
-            <div class="mb-1">
+            <div class="mb-2">
                 <div class="flex justify-between items-baseline">
                     <h4 class="text-sm font-bold text-gray-800">SoFi</h4>
                     <span class="text-xs font-medium text-gray-500">December 2025 – Present</span>
                 </div>
                 <p class="text-xs text-gray-600 font-semibold">Software Engineer, Home Loans</p>
-                <ul class="list-disc list-outside mt-0.5 ml-4 text-xs text-gray-700 space-y-0 leading-tight">
-                    <li>Designed and delivered the end-to-end <b>HELOC</b> offer-matching experience, building both the <b>Kotlin</b> backend and the frontend prototype to match prospects to pre-qualified offers via PII-based identity resolution.</li>
-                    <li>Partnered with the security team to certify the sensitive PII data flow powering offer matching.</li>
-                    <li>Eliminated a critical attribution defect that had been silently breaking lead routing to loan officers and Salesforce.</li>
-                    <li>Led the migration of hl-ui's entire observability stack &mdash; error-rate alerting, load-time monitors, and the full <b>SLO</b> &mdash; from Datadog to Terraform-managed <b>Signalfire</b>, redesigning the alerting logic to cut <b>~21</b> false-positive on-call pages per rotation.</li>
-                    <li>Instrumented the webhook and <b>Temporal</b> workflow paths with structured logging, correlation IDs, and failure metrics, sharply reducing incident debugging time.</li>
+                <ul class="list-disc list-outside mt-1 ml-4 text-xs text-gray-700 space-y-1 leading-snug">
+                    <li>Designed and delivered the end-to-end <b>HELOC</b> offer-matching experience &mdash; <b>Kotlin</b> backend plus frontend prototype, security-certified PII-based identity resolution &mdash; and fixed a critical attribution defect in it that had been silently breaking lead routing to loan officers and Salesforce.</li>
+                    <li>Led the migration of hl-ui's entire observability stack &mdash; error-rate alerting, load-time monitors, and the full <b>SLO</b> &mdash; from Datadog to Terraform-managed <b>Signalfire</b>, cutting <b>~21</b> false-positive on-call pages per rotation, and instrumented the webhook and <b>Temporal</b> workflow paths with structured logging and failure metrics to sharply speed incident response.</li>
                     <li>Led the backend launch of SoFi's home equity product in New York, coordinating loan origination, application intake, underwriting routing, and appraisal/title vendor integrations through a clean, production-ready launch.</li>
                 </ul>
             </div>
 
             <!-- Percuity -->
-            <div class="mb-1">
+            <div class="mb-2">
                 <div class="flex justify-between items-baseline">
                     <h4 class="text-sm font-bold text-gray-800">Percuity</h4>
                     <span class="text-xs font-medium text-gray-500">September 2025 – December 2025</span>
                 </div>
                 <p class="text-xs text-gray-600 font-semibold">Engineering Lead, Systems Reliability &amp; Platform</p>
-                <ul class="list-disc list-outside mt-0.5 ml-4 text-xs text-gray-700 space-y-0 leading-tight">
-                    <li>Stood up the early-stage startup's entire <b>AWS</b> cloud infrastructure from scratch in a single quarter, provisioning <b>ECS Fargate</b>, <b>Lambda</b>, and <b>DynamoDB</b> as code with <b>Terraform</b>.</li>
-                    <li>Designed <b>CI/CD</b> pipelines that accelerated build, test, and deploy cycles for a lean engineering team shipping at high velocity.</li>
+                <ul class="list-disc list-outside mt-1 ml-4 text-xs text-gray-700 space-y-1 leading-snug">
+                    <li>Stood up the early-stage startup's entire <b>AWS</b> cloud infrastructure from scratch in a single quarter &mdash; <b>Terraform</b>-managed <b>ECS Fargate</b>, <b>Lambda</b>, and <b>DynamoDB</b>, plus <b>CI/CD</b> pipelines &mdash; enabling a lean team to ship production code at startup speed.</li>
                     <li>Established observability and incident-response practices with <b>Datadog</b> and <b>OpenTelemetry</b>, raising deployment reliability and developer velocity.</li>
                 </ul>
             </div>
 
             <!-- Fetch -->
-            <div class="mb-1">
+            <div class="mb-2">
                 <div class="flex justify-between items-baseline">
                     <h4 class="text-sm font-bold text-gray-800">Fetch Rewards</h4>
                     <span class="text-xs font-medium text-gray-500">July 2020 – August 2025</span>
                 </div>
                 <p class="text-xs text-gray-600 font-semibold">Senior Software Engineer &rarr; Team Lead &rarr; Software Engineer II &rarr; Software Engineer</p>
-                <ul class="list-disc list-outside mt-0.5 ml-4 text-xs text-gray-700 space-y-0 leading-tight">
+                <ul class="list-disc list-outside mt-1 ml-4 text-xs text-gray-700 space-y-1 leading-snug">
                     <li>Engineered a resilient, asynchronous receipt-processing system with <b>Java</b> and <b>Go</b> microservices, <b>AWS SQS</b>, <b>DynamoDB</b>, and <b>Redis</b> that scaled Fetch to Super Bowl ad traffic, sustaining <b>80,000+ RPS</b> (a <b>10x</b> increase) with zero downtime.</li>
                     <li>Architected a data-aggregation service that cut ML parsing costs by <b>$30K</b> per month through <b>100x</b> email deduplication.</li>
                     <li>Led the e-receipts 2.0 launch in <b>Go</b>, overhauling observability with <b>OpenTelemetry</b>, <b>Grafana</b>, and <b>Hosted Graphite</b> to lift user engagement <b>40%</b> and reduce fraud <b>70%</b>.</li>
